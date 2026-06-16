@@ -102,11 +102,11 @@ function initLoader() {
   if (loader) loader.remove();
 }
 
-function initSkillCloud() {
-  const cloud = document.getElementById("skillsCloud");
-  if (!cloud) return;
+function initCompanyLogoMagnet() {
+  const wall = document.getElementById("companyLogoWall");
+  if (!wall) return;
 
-  const icons = [...cloud.querySelectorAll(".skill-icon")];
+  const icons = [...wall.querySelectorAll(".logo-tile")];
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (!icons.length || reduceMotion) return;
 
@@ -118,7 +118,7 @@ function initSkillCloud() {
     icon.style.setProperty("--scale", "1");
   };
 
-  cloud.addEventListener("pointermove", (event) => {
+  wall.addEventListener("pointermove", (event) => {
     if (event.pointerType === "touch") return;
     cancelAnimationFrame(frame);
     frame = requestAnimationFrame(() => {
@@ -129,25 +129,29 @@ function initSkillCloud() {
         const dx = event.clientX - iconX;
         const dy = event.clientY - iconY;
         const distance = Math.hypot(dx, dy);
-        const strength = Math.max(0, 1 - distance / 190);
-        const pull = strength * 0.26;
+        const strength = Math.max(0, 1 - distance / 170);
+        const pull = strength * 0.18;
 
         icon.style.setProperty("--mx", `${dx * pull}px`);
         icon.style.setProperty("--my", `${dy * pull}px`);
-        icon.style.setProperty("--mz", `${strength * 96}px`);
-        icon.style.setProperty("--scale", `${1 + strength * 0.42}`);
+        icon.style.setProperty("--mz", `${strength * 38}px`);
+        icon.style.setProperty("--scale", `${1 + strength * 0.18}`);
       });
     });
   });
 
-  cloud.addEventListener("pointerleave", () => {
+  wall.addEventListener("pointerleave", () => {
     cancelAnimationFrame(frame);
     icons.forEach(resetIcon);
+  });
+
+  icons.forEach((icon) => {
+    icon.addEventListener("blur", () => resetIcon(icon));
   });
 }
 
 initTheme();
 initCarousel();
 initReveal();
-initSkillCloud();
+initCompanyLogoMagnet();
 initLoader();
