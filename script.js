@@ -102,7 +102,52 @@ function initLoader() {
   if (loader) loader.remove();
 }
 
+function initSkillCloud() {
+  const cloud = document.getElementById("skillsCloud");
+  if (!cloud) return;
+
+  const icons = [...cloud.querySelectorAll(".skill-icon")];
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!icons.length || reduceMotion) return;
+
+  let frame = 0;
+  const resetIcon = (icon) => {
+    icon.style.setProperty("--mx", "0px");
+    icon.style.setProperty("--my", "0px");
+    icon.style.setProperty("--mz", "0px");
+    icon.style.setProperty("--scale", "1");
+  };
+
+  cloud.addEventListener("pointermove", (event) => {
+    if (event.pointerType === "touch") return;
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(() => {
+      icons.forEach((icon) => {
+        const rect = icon.getBoundingClientRect();
+        const iconX = rect.left + rect.width / 2;
+        const iconY = rect.top + rect.height / 2;
+        const dx = event.clientX - iconX;
+        const dy = event.clientY - iconY;
+        const distance = Math.hypot(dx, dy);
+        const strength = Math.max(0, 1 - distance / 190);
+        const pull = strength * 0.26;
+
+        icon.style.setProperty("--mx", `${dx * pull}px`);
+        icon.style.setProperty("--my", `${dy * pull}px`);
+        icon.style.setProperty("--mz", `${strength * 96}px`);
+        icon.style.setProperty("--scale", `${1 + strength * 0.42}`);
+      });
+    });
+  });
+
+  cloud.addEventListener("pointerleave", () => {
+    cancelAnimationFrame(frame);
+    icons.forEach(resetIcon);
+  });
+}
+
 initTheme();
 initCarousel();
 initReveal();
+initSkillCloud();
 initLoader();

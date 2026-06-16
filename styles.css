@@ -40,7 +40,7 @@
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: clip; }
 body {
   min-height: 100vh;
   background: var(--bg-main) !important;
@@ -256,6 +256,7 @@ section h2::after {
   border-block: 1px solid var(--border-soft);
   overflow-x: auto;
   overflow-y: hidden;
+  contain: paint;
   background: transparent !important;
   scrollbar-width: thin;
   scrollbar-color: var(--accent-line) transparent;
@@ -446,31 +447,185 @@ article p { margin: 0; color: var(--text-muted) !important; }
 }
 .logo-tile.featured { transform: translateY(-4px); box-shadow: 0 0 20px color-mix(in srgb, var(--accent-line) 35%, transparent); }
 
+.skills-cloud-section {
+  display: grid;
+  grid-template-columns: minmax(220px, .72fr) minmax(360px, 1.28fr);
+  gap: clamp(1.8rem, 5vw, 4rem);
+  align-items: center;
+}
+.skills-copy p {
+  max-width: 28rem;
+  margin: -12px 0 0;
+  color: var(--text-main) !important;
+}
+.icon-cloud {
+  --cloud-size: min(620px, 82vw);
+  --cloud-radius: clamp(120px, 26vw, 224px);
+  position: relative;
+  width: var(--cloud-size);
+  min-height: min(560px, 76vw);
+  justify-self: center;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  perspective: 900px;
+  transform-style: preserve-3d;
+  isolation: isolate;
+  overflow: visible;
+}
+.cloud-glow {
+  position: absolute;
+  inset: 8%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 44%, color-mix(in srgb, var(--accent-line) 24%, transparent), transparent 48%),
+    radial-gradient(circle at 62% 52%, color-mix(in srgb, var(--feature-bg) 18%, transparent), transparent 58%);
+  border: 1px solid color-mix(in srgb, var(--accent-line) 24%, transparent);
+  box-shadow:
+    inset 0 0 56px color-mix(in srgb, var(--accent-line) 20%, transparent),
+    0 28px 70px color-mix(in srgb, var(--feature-bg) 18%, transparent);
+  animation: cloudPulse 8s ease-in-out infinite;
+}
+.cloud-glow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-image: radial-gradient(circle, color-mix(in srgb, var(--accent-line) 36%, transparent) 1px, transparent 1px);
+  background-size: 12px 12px;
+  opacity: .16;
+  mask-image: radial-gradient(circle, black 28%, transparent 72%);
+}
+.skill-icon {
+  --mx: 0px;
+  --my: 0px;
+  --mz: 0px;
+  --scale: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  gap: .22rem;
+  width: clamp(76px, 10vw, 108px);
+  min-height: clamp(76px, 10vw, 108px);
+  padding: .72rem;
+  border-radius: 28px;
+  border: 1px solid color-mix(in srgb, var(--accent-line) 32%, transparent);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.94), rgba(255,255,255,.74)),
+    var(--feature-tile-bg);
+  box-shadow:
+    0 16px 34px rgba(30, 34, 72, .16),
+    inset 0 1px 0 rgba(255,255,255,.72);
+  transform:
+    translate(-50%, -50%)
+    translate3d(var(--x), var(--y), calc(var(--z) + var(--mz)))
+    scale(var(--scale));
+  transition:
+    transform .42s cubic-bezier(.2,.85,.2,1),
+    box-shadow .28s ease,
+    border-color .28s ease;
+  animation: skillFloat 7s ease-in-out infinite;
+  animation-delay: var(--delay);
+  will-change: transform;
+}
+.skill-icon:hover,
+.skill-icon:focus-visible {
+  border-color: var(--accent-line);
+  box-shadow:
+    0 22px 42px color-mix(in srgb, var(--accent-line) 28%, transparent),
+    inset 0 1px 0 rgba(255,255,255,.76);
+  outline: none;
+}
+.skill-mark {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  color: #ffffff !important;
+  font-family: "Sora", sans-serif;
+  font-weight: 900;
+  font-size: .88rem;
+  letter-spacing: -.02em;
+}
+.skill-name {
+  color: #1E2248 !important;
+  font-family: "Sora", sans-serif;
+  font-size: .7rem;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+}
+.skill-figma .skill-mark { background: linear-gradient(135deg, #f24e1e, #a259ff 55%, #1abcfe); }
+.skill-excel .skill-mark { background: linear-gradient(135deg, #107c41, #21a366); }
+.skill-sql .skill-mark { background: linear-gradient(135deg, #3164d4, #7aa7ff); }
+.skill-salesforce .skill-mark { background: linear-gradient(135deg, #00a1e0, #7edbff); }
+.skill-python .skill-mark { background: linear-gradient(135deg, #306998, #ffd43b); }
+.skill-powerbi .skill-mark { background: linear-gradient(135deg, #f2c811, #d99000); }
+.skill-jira .skill-mark { background: linear-gradient(135deg, #0052cc, #2684ff); }
+.skill-notion .skill-mark { background: linear-gradient(135deg, #111111, #555555); }
+.skill-canva .skill-mark { background: linear-gradient(135deg, #00c4cc, #8b3dff, #ff5fa2); }
+.skill-html .skill-mark { background: linear-gradient(135deg, #e34f26, #264de4); }
+.skill-ga .skill-mark { background: linear-gradient(135deg, #f9ab00, #e37400); }
+.skill-product .skill-mark { background: linear-gradient(135deg, var(--accent-strong), #d864ff); }
+[data-theme="dark"] .skill-icon,
+.dark-mode .skill-icon {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.98), rgba(238,233,255,.86)),
+    #ffffff;
+}
+@keyframes skillFloat {
+  0%, 100% { margin-top: 0; }
+  50% { margin-top: -10px; }
+}
+@keyframes cloudPulse {
+  0%, 100% { transform: scale(.98) rotate(0deg); opacity: .86; }
+  50% { transform: scale(1.03) rotate(2deg); opacity: 1; }
+}
+
 .testimonial { background: transparent !important; border: none; box-shadow: none; }
 .carousel {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: .75rem;
+  padding-inline: 3.2rem;
 }
 .carousel-btn {
-  flex: 0 0 44px;
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  flex: 0 0 48px;
   border: 1px solid var(--border-soft);
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: transparent;
+  background: var(--bg-main);
   cursor: pointer;
-  color: var(--accent-line);
-  font-size: 1.35rem;
+  color: var(--text-heading) !important;
+  font-size: 1.65rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  transform: translateY(-50%);
+  box-shadow: 0 12px 28px rgba(30, 34, 72, .16);
 }
+.carousel-btn#prevTestimonial { left: 0; }
+.carousel-btn#nextTestimonial { right: 0; }
 .carousel-btn:hover, .carousel-btn:focus-visible {
   border-color: var(--accent-line);
   background: color-mix(in srgb, var(--accent-line) 12%, transparent);
+  color: var(--text-heading) !important;
   outline: none;
 }
 .testimonial-card {
   flex: 1 1 660px;
+  min-width: 0;
+  max-width: 100%;
   background: radial-gradient(circle at 84% 8%, color-mix(in srgb, var(--accent-line) 28%, transparent), transparent 34%), var(--feature-bg) !important;
   color: var(--feature-text) !important;
   border: 1px solid color-mix(in srgb, var(--accent-line) 35%, transparent);
@@ -484,6 +639,8 @@ article p { margin: 0; color: var(--text-muted) !important; }
 .testimonial-card p { color: var(--feature-muted) !important; margin: .7rem 0 0; }
 .testimonial-card span, .testimonial-card .role { color: var(--feature-muted) !important; }
 .quote blockquote { margin: 0; line-height: 1.7; color: var(--feature-text) !important; }
+.quote blockquote,
+.quote p { overflow-wrap: anywhere; }
 .dots { text-align: center; margin-top: .8rem; }
 .dots button { width: 10px; height: 10px; border-radius: 50%; border: none; margin: 0 4px; background: color-mix(in srgb, var(--accent-line) 34%, transparent); cursor: pointer; }
 .dots button.active { background: var(--accent-line); }
@@ -818,28 +975,64 @@ article p { margin: 0; color: var(--text-muted) !important; }
   .about-portrait { width: min(42vw, 300px); }
   .case-card { flex-basis: 100%; }
   .logo-wall { grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); }
+  .skills-cloud-section { grid-template-columns: 1fr; }
+  .skills-copy { text-align: center; }
+  .skills-copy p { margin-inline: auto; }
 }
 
 @media (max-width: 720px) {
-  .site-header { padding: .75rem .65rem; }
+  .site-header { padding: .55rem .55rem; }
   .nav-shell, .navbar {
-    border-radius: 28px;
+    border-radius: 24px;
     align-items: center;
     justify-content: center;
-    padding: .7rem;
+    padding: .56rem;
+    gap: .42rem;
   }
   .brand { flex: 1 1 100%; text-align: center; }
-  .brand-script { white-space: normal; }
-  .tabs { flex: 1 1 100%; justify-content: flex-start; padding-bottom: .1rem; }
-  .tab { padding: .48rem .82rem; font-size: .94rem; }
+  .brand-script { font-size: clamp(1.45rem, 7vw, 1.7rem); white-space: normal; }
+  .tabs {
+    flex: 1 1 100%;
+    justify-content: center;
+    gap: .3rem;
+    overflow: visible;
+    padding-bottom: 0;
+  }
+  .tab { min-height: 34px; padding: .34rem .62rem; font-size: .84rem; }
+  .mode-toggle { flex-basis: 48px; width: 48px; height: 28px; }
+  .mode-toggle::before { width: 18px; height: 18px; }
+  [data-theme="dark"] .mode-toggle::before,
+  .dark-mode .mode-toggle::before { transform: translateX(20px); }
   .hero { padding-top: 3.2rem; }
   .hero-copy { max-width: 34rem; }
   .marquee { min-width: 760px; }
   .logo-wall { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .logo-tile.featured { transform: none; }
-  .carousel { flex-wrap: wrap; }
-  .testimonial-card { order: 1; flex-basis: 100%; }
-  .carousel-btn { order: 2; }
+  .skills-cloud-section { gap: 1rem; }
+  .icon-cloud {
+    --cloud-size: min(390px, 94vw);
+    --cloud-radius: clamp(92px, 27vw, 128px);
+    min-height: 360px;
+  }
+  .skill-icon {
+    width: clamp(64px, 19vw, 82px);
+    min-height: clamp(64px, 19vw, 82px);
+    border-radius: 22px;
+    padding: .56rem;
+  }
+  .skill-mark { width: 34px; height: 34px; border-radius: 12px; font-size: .72rem; }
+  .skill-name { font-size: .58rem; }
+  .carousel { padding-inline: 0; padding-bottom: 3.8rem; }
+  .testimonial-card { flex-basis: 100%; }
+  .carousel-btn {
+    top: auto;
+    bottom: 0;
+    transform: none;
+    width: 46px;
+    height: 46px;
+  }
+  .carousel-btn#prevTestimonial { left: calc(50% - 54px); }
+  .carousel-btn#nextTestimonial { right: calc(50% - 54px); }
   .contact-buttons a,
   .cta-actions a,
   .contact-actions a { width: min(100%, 340px); justify-content: center; text-align: center; }
@@ -877,11 +1070,14 @@ article p { margin: 0; color: var(--text-muted) !important; }
 @media (max-width: 380px) {
   .logo-wall { grid-template-columns: 1fr; }
   .tabs { gap: .28rem; }
-  .tab { padding-inline: .7rem; }
-  .mode-toggle { flex-basis: 52px; width: 52px; }
+  .tab { padding-inline: .52rem; font-size: .8rem; }
+  .mode-toggle { flex-basis: 46px; width: 46px; }
+  [data-theme="dark"] .mode-toggle::before,
+  .dark-mode .mode-toggle::before { transform: translateX(18px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
+  .skill-icon { transform: translate(-50%, -50%) translate3d(var(--x), var(--y), var(--z)) !important; }
 }
