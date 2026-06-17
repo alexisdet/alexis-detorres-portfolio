@@ -1,7 +1,7 @@
 const quotes = [
-  { text: "It was a pleasure to work with Alexis. She made sure to put her 100 in everything she did.", by: "Senior Consultant, Ryan" },
-  { text: "Alexis's curiosity not only helped her network to get new projects, but it showed her work ethic to the whole company.", by: "Managing Director, Protiviti" },
-  { text: "Her curiosity and analytical discipline stand out. She asks the right questions and follows through deeply.", by: "Professor Liming Le, Physics" }
+  { text: "In less than two weeks on a live complex account, Alexis demonstrated exceptional initiative and ownership. She quickly understood campaign operations, anticipated project needs, and consistently delivered high quality work with minimal direction. Her ability to organize complex workflows and improve team efficiency made an immediate impact.", by: "Protiviti Manager" },
+  { text: "Alexis brought a quality over quantity mindset to every project. She asked thoughtful questions, proactively identified opportunities for improvement, and consistently went beyond assigned responsibilities. Her curiosity and drive made her someone the team could rely on.", by: "Ryan, Senior Consultant" },
+  { text: "Alexis was the top student in my physics class, standing out not only for her academic performance but also for her persistence and analytical thinking. She approached challenging problems with discipline and creativity, qualities that will serve her well in any leadership role.", by: "Professor Liming Le" }
 ];
 
 let quoteIndex = 0;
