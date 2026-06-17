@@ -8,9 +8,10 @@
   --text-main: #1E2248;
   --text-muted: #565875;
   --brand-logo: #1E2248;
-  --accent-line: #c7b5ff;
+  --accent-line: #1E2248;
   --accent-strong: #1E2248;
-  --border-soft: rgba(199, 181, 255, 0.48);
+  --accent-red: #d84b4b;
+  --border-soft: rgba(30, 34, 72, 0.26);
   --shadow-soft: 0 18px 48px rgba(30, 34, 72, 0.1);
   --feature-bg: #ffffff;
   --feature-text: #1E2248;
@@ -30,6 +31,7 @@
   --brand-logo: #ffffff;
   --accent-line: #c7b5ff;
   --accent-strong: #d9ceff;
+  --accent-red: #ff8585;
   --border-soft: rgba(255, 255, 255, 0.16);
   --shadow-soft: 0 22px 58px rgba(0, 0, 0, 0.3);
   --feature-bg: #201f4d;
@@ -293,6 +295,8 @@ section h2::after {
   font-size: .95rem;
   line-height: 1;
 }
+.marquee-track span i.symbol-ux { color: var(--accent-line) !important; }
+.marquee-track span i.symbol-product { color: var(--accent-red) !important; }
 .marquee-wrap:hover .marquee,
 .marquee-wrap:focus-within .marquee { animation-play-state: paused; }
 @keyframes scrollMarquee {
@@ -332,9 +336,9 @@ section h2::after {
   transform-origin: center left;
   box-shadow: 0 18px 38px rgba(30, 34, 72, .08);
 }
-.case-card:nth-child(1) .mockup-placeholder { background: radial-gradient(circle at 78% 18%, rgba(199,181,255,.22), transparent 26%), linear-gradient(135deg, #ffffff, #fbfaff); }
+.case-card:nth-child(1) .mockup-placeholder { background: radial-gradient(circle at 78% 18%, rgba(30,34,72,.1), transparent 26%), linear-gradient(135deg, #ffffff, #fbfaff); }
 .case-card:nth-child(2) .mockup-placeholder { background: radial-gradient(circle at 25% 18%, rgba(30,34,72,.11), transparent 28%), linear-gradient(135deg, #ffffff, #fcfbff); }
-.case-card:nth-child(3) .mockup-placeholder { background: radial-gradient(circle at 78% 26%, rgba(199,181,255,.18), transparent 30%), linear-gradient(135deg, #ffffff, #fdfcff); }
+.case-card:nth-child(3) .mockup-placeholder { background: radial-gradient(circle at 78% 26%, rgba(30,34,72,.09), transparent 30%), linear-gradient(135deg, #ffffff, #fdfcff); }
 .case-card:nth-child(4) .mockup-placeholder { background: radial-gradient(circle at 26% 22%, rgba(30,34,72,.09), transparent 29%), linear-gradient(135deg, #ffffff, #fbfaff); }
 [data-theme="dark"] .case-card .mockup-placeholder,
 .dark-mode .case-card .mockup-placeholder { background: radial-gradient(circle at 78% 22%, rgba(199,181,255,.18), transparent 30%), linear-gradient(135deg, #1f244e, #29285e); }
@@ -410,7 +414,7 @@ article p { margin: 0; color: var(--text-muted) !important; }
   padding: clamp(1rem, 4vw, 2.25rem);
   border-radius: clamp(20px, 4vw, 32px);
   background:
-    radial-gradient(circle at 18% 12%, rgba(199, 181, 255, .16), transparent 30%),
+    radial-gradient(circle at 18% 12%, rgba(30, 34, 72, .08), transparent 30%),
     #ffffff !important;
   border: 1px solid var(--border-soft);
   box-shadow: 0 18px 42px rgba(30, 34, 72, .08);
@@ -429,7 +433,7 @@ article p { margin: 0; color: var(--text-muted) !important; }
   place-items: center;
   border-radius: 18px;
   background: rgba(255, 255, 255, .92);
-  border: 1px solid rgba(199, 181, 255, .42);
+  border: 1px solid rgba(30, 34, 72, .24);
   box-shadow: 0 8px 20px rgba(30, 34, 72, .07);
   overflow: hidden;
   transform: translate3d(var(--mx), var(--my), var(--mz)) scale(var(--scale));
@@ -457,7 +461,7 @@ article p { margin: 0; color: var(--text-muted) !important; }
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(199, 181, 255, .42) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(30, 34, 72, .24) 1px, transparent 1px);
   background-size: 7px 7px;
   opacity: .1;
   pointer-events: none;
@@ -469,7 +473,7 @@ article p { margin: 0; color: var(--text-muted) !important; }
 .logo-tile:focus-visible {
   border-color: var(--accent-line);
   background: #ffffff;
-  box-shadow: 0 18px 34px rgba(30, 34, 72, .13), 0 0 22px rgba(199, 181, 255, .22);
+  box-shadow: 0 18px 34px rgba(30, 34, 72, .13), 0 0 22px rgba(30, 34, 72, .12);
   outline: none;
 }
 [data-theme="dark"] .logo-wall,
@@ -636,7 +640,7 @@ article p { margin: 0; color: var(--text-muted) !important; }
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(185, 156, 255, .36) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(30, 34, 72, .26) 1px, transparent 1px);
   background-size: 9px 9px;
   opacity: .14;
   mix-blend-mode: soft-light;
