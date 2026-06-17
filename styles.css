@@ -9,6 +9,7 @@
   --text-muted: #565875;
   --brand-logo: #1E2248;
   --accent-line: #1E2248;
+  --underline-accent: #c7b5ff;
   --accent-strong: #1E2248;
   --accent-red: #d84b4b;
   --border-soft: rgba(30, 34, 72, 0.26);
@@ -30,6 +31,7 @@
   --text-muted: #f0ecff;
   --brand-logo: #ffffff;
   --accent-line: #c7b5ff;
+  --underline-accent: #c7b5ff;
   --accent-strong: #d9ceff;
   --accent-red: #ff8585;
   --border-soft: rgba(255, 255, 255, 0.16);
@@ -200,9 +202,9 @@ section h2::after {
   min-width: 72px;
   height: 3px;
   margin-top: 10px;
-  background: var(--accent-line) !important;
+  background: var(--underline-accent) !important;
   border-radius: 999px;
-  box-shadow: 0 0 14px color-mix(in srgb, var(--accent-line) 45%, transparent);
+  box-shadow: 0 0 14px color-mix(in srgb, var(--underline-accent) 45%, transparent);
 }
 
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .55s ease, transform .55s ease; }
@@ -242,8 +244,8 @@ section h2::after {
   bottom: 0;
   height: 4px;
   border-radius: 999px;
-  background: var(--accent-line);
-  box-shadow: 0 0 14px color-mix(in srgb, var(--accent-line) 45%, transparent);
+  background: var(--underline-accent);
+  box-shadow: 0 0 14px color-mix(in srgb, var(--underline-accent) 45%, transparent);
 }
 .hero-copy {
   max-width: 760px;
