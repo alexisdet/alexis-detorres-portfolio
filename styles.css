@@ -298,7 +298,7 @@ section h2::after {
   line-height: 1;
 }
 .marquee-track span i.symbol-ux { color: var(--accent-line) !important; }
-.marquee-track span i.symbol-product { color: var(--accent-red) !important; }
+.marquee-track span i.symbol-product { color: var(--accent-line) !important; }
 .marquee-wrap:hover .marquee,
 .marquee-wrap:focus-within .marquee { animation-play-state: paused; }
 @keyframes scrollMarquee {
