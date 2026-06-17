@@ -92,7 +92,7 @@ main, .site-header, .cta, .site-footer, .contact-marquee { position: relative; z
   position: static;
   top: auto;
   padding: clamp(.75rem, 2vw, 1.1rem) clamp(.75rem, 2vw, 1.4rem);
-  background: #1E2248 !important;
+  background: var(--bg-main) !important;
 }
 .navbar, .nav-shell {
   width: min(1280px, 100%);
@@ -100,7 +100,7 @@ main, .site-header, .cta, .site-footer, .contact-marquee { position: relative; z
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 999px;
   padding: .62rem .72rem;
-  background: transparent !important;
+  background: #1E2248 !important;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
