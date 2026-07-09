@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Anton&family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=20260709-compact-projects" />
+  <link rel="stylesheet" href="../styles.css?v=20260709-case-article" />
 </head>
 <body class="dark-mode">
   <header class="site-header">
@@ -54,17 +54,40 @@
         <div><span>Role</span><strong>Product Strategy, UX/UI Design</strong></div>
         <div><span>Skills</span><strong>Base44, Clinical UX, AI Workflow</strong></div>
       </div>
-    </section><section class="section-card"><h2>The Short Version</h2><p>I designed a smarter way for clinics to prepare prior authorization requests without leaving patients in the dark. AuthForm helps clinics move from messy patient notes to payer-ready submissions using AI extraction, criteria review, denial-risk breakdowns, and editable authorization materials.</p></section>
-    <section class="section-card"><h2>Problem</h2><p>Prior authorization is not just paperwork. It can delay care. Physicians manage insurer rules, clinical documentation, safety checks, step-therapy requirements, and appeal workflows while patients often cannot see what is happening or what comes next.</p></section>
-    <section class="section-card"><h2>Goal</h2><p>Help clinics reduce preventable prior authorization delays while keeping physicians in control and giving patients plain-language visibility into treatment status.</p></section>
-    <section class="section-card"><h2>Case Context</h2><p>The test case focused on Elena Ramirez, a 29-year-old patient diagnosed with ADHD, Combined Type, with ICD-10 code F90.2. Her physician requested Vyvanse after two prior medication trials, requiring step-therapy evidence, safety screening, documentation of impairment, and a follow-up plan.</p></section>
-    <section class="artifact-section"><p class="artifact-label">Workflow artifact</p><h2>Translating clinical notes into reviewable decisions</h2><div class="artifact-grid"><figure><img src="../assets/projects/project-3.png" alt="Temporary AuthForm portal visual"><figcaption>Placeholder for physician dashboard, extraction review, and payer criteria screens.</figcaption></figure><figure><img src="../assets/projects/project-4.png" alt="Temporary AuthForm patient portal visual"><figcaption>Placeholder for patient status tracker, medication guidance, and secure messages.</figcaption></figure></div></section>
-    <section class="section-card"><h2>Physician Portal</h2><div class="case-columns"><div><h3>Patient Intake</h3><p>Physicians can paste a flexible patient summary instead of starting with manual field-by-field entry.</p></div><div><h3>Auto-Extraction Review</h3><p>AI extracts diagnosis, ICD-10 code, medication, prior treatments, symptoms, side effects, and red flags for review.</p></div><div><h3>Insurer Criteria</h3><p>The portal maps the case against payer rules, showing what is met, not met, or risky before submission.</p></div></div><div class="image-ph case-visual">AuthForm workflow: intake -> extraction -> criteria review -> risk breakdown -> PA output</div></section>
-    <section class="section-card"><h2>Key Product Decision</h2><p>AI assists. Physicians approve. AuthForm can extract information, draft clinical rationale, identify missing documentation, and suggest stronger submission paths, but a physician or clinic staff member still reviews, edits, and approves the output before anything is finalized.</p></section>
-    <section class="section-card"><h2>Risk Review</h2><p>Instead of showing a vague approval score, AuthForm breaks denial risk into documentation completeness, step-therapy compliance, ICD-10 accuracy, safety screening, and cost risk. The score is decision support, not a guarantee.</p></section>
-    <section class="section-card"><h2>Patient Portal</h2><div class="case-columns"><div><h3>Medication Overview</h3><p>Explains purpose, dosage, common side effects, safety warnings, and previously tried medications.</p></div><div><h3>Status Tracker</h3><p>Shows the authorization process in plain language so patients know what is pending and what happens next.</p></div><div><h3>Safety &amp; Disposal</h3><p>Gives safe disposal options, controlled-substance reminders, and patient-friendly medication resources.</p></div></div></section>
-    <section class="section-card"><h2>Impact</h2><div class="case-columns four"><div><h3>Faster Case Preparation</h3><p>Clinical notes become structured authorization inputs.</p></div><div><h3>Fewer Gaps</h3><p>Missing documents and insurer requirements are surfaced earlier.</p></div><div><h3>Clearer Updates</h3><p>Patients can track status without seeing internal clinical scoring.</p></div><div><h3>Safer Follow-Through</h3><p>Medication safety guidance supports care beyond approval.</p></div></div></section>
-    <section class="section-card"><h2>Reflection</h2><p>This project taught me how to design AI for a high-trust workflow. The strongest AI use case was not replacing physicians. It was reducing repetitive work while keeping review, judgment, and approval in human hands.</p></section>
+    </section>
+
+    <section class="case-story-block">
+      <p class="case-story-label">Long Story Short</p>
+      <h2>I created an AI-assisted workflow that turns messy clinical notes into reviewable decisions</h2>
+      <p>AuthForm helps clinics move from unstructured patient notes to payer-ready authorization materials through extraction, criteria review, risk breakdowns, and editable outputs. The experience keeps physicians in control while making status clearer for patients.</p>
+      <div class="case-summary-grid"><div><span>01</span><h3>Clinical UX</h3><p>Structured patient intake, medication history, insurer criteria, and missing documentation into a clearer review flow.</p></div><div><span>02</span><h3>AI Assistance</h3><p>Used AI to reduce repetitive setup while keeping physician review and approval central to the workflow.</p></div><div><span>03</span><h3>Patient Clarity</h3><p>Created a patient-facing status experience that explains what is pending and what happens next.</p></div></div>
+    </section>
+
+    <section class="case-question-callout"><p>How might we help clinics prepare stronger prior authorizations without leaving patients in the dark?</p></section>
+
+    <section class="case-research-block">
+      <p class="artifact-label">Workflow Research</p>
+      <h2>To reduce delay risk, I mapped the information clinics need before submission</h2>
+      <p>The test case centered on ADHD medication approval, step-therapy evidence, diagnosis documentation, safety screening, and follow-up planning. The biggest opportunity was surfacing missing evidence before submission instead of after denial.</p>
+      <figure class="case-big-visual"><img src="../assets/projects/project-3.png" alt="Project research and interface placeholder"><figcaption>Current placeholder for AuthForm physician review, patient status, and prior authorization workflow screens.</figcaption></figure>
+    </section>
+
+    <section class="case-story-block">
+      <p class="case-story-label">Solution</p>
+      <h2>I designed the product around review, not replacement</h2>
+      <p>AuthForm can extract information, draft rationale, identify missing documentation, and suggest stronger submission paths, but physicians still review, edit, and approve before anything is finalized.</p>
+    </section>
+
+    <section class="case-story-block">
+      <p class="case-story-label">Impact</p>
+      <div class="case-summary-grid"><div><h3>Faster Case Prep</h3><p>Clinical notes become structured authorization inputs.</p></div><div><h3>Fewer Gaps</h3><p>Missing requirements are surfaced before submission.</p></div><div><h3>Safer Follow-Through</h3><p>Patient guidance supports care beyond approval.</p></div></div>
+    </section>
+
+    <section class="case-story-block">
+      <p class="case-story-label">Reflection</p>
+      <h2>What I learned</h2>
+      <p>This project taught me that high-trust AI should support judgment instead of replacing it. The product value came from making complex clinical work easier to review.</p>
+    </section>
 
     <a class="back-link" href="../index.html">&larr; Back to all projects</a>
   </main>
@@ -84,7 +107,7 @@
     <a href="../index.html#contact-section">Contact</a>
   </footer>
 
-  <script src="../script.js?v=20260709-compact-projects"></script>
+  <script src="../script.js?v=20260709-case-article"></script>
 </body>
 </html>
 
