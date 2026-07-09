@@ -1,26 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AuthForm - Secure Access Experience | Case Study</title>
+  <title>AuthForm | Case Study</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Anton&family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles.css?v=20260709-case-studies" />
 </head>
 <body class="dark-mode">
-  <div id="loader" class="loader-screen" aria-live="polite">
-    <div class="dice" id="dice">
-      <div class="face f1"><div class="pips"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-      <div class="face f2"><div class="pips"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-      <div class="face f3"><div class="pips"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-      <div class="face f4"><div class="pips"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-      <div class="face f5"><div class="pips"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-      <div class="face f6"><div class="pips"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-    </div>
-  </div>
-    <header class="site-header">
+  <header class="site-header">
     <div class="nav-shell navbar">
       <a class="brand" href="../index.html"><span class="brand-script">Alexis Detorres</span></a>
       <nav class="tabs" aria-label="Main navigation">
@@ -33,20 +23,37 @@
   </header>
 
   <main class="case-study reveal">
-    <h1>AuthForm - Secure Access Experience</h1>
-    <div class="meta">
-      <span>Role: Product Manager / UX Strategist</span>
-      <span>Timeline: 2025</span>
-      <span>Tools: UX Audit, Wireframes, A/B Testing</span>
-    </div>
+    <section class="case-hero-panel authform-preview">
+      <div class="phone-frame case-phone" aria-hidden="true">
+        <div class="phone-screen">
+          <span class="mini-pill">Prior authorization</span>
+          <img class="phone-image" src="../assets/projects/project-3.png" alt="" loading="lazy" /><strong>AuthForm</strong>
+          <p>AI structures clinical details while physicians review and approve.</p>
+          <div class="mini-list"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+      <div class="case-hero-copy">
+        <span class="case-kicker">Product Design · Full Case Study · 2026</span>
+        <h1>AuthForm</h1>
+        <p>Created an AI-assisted prior authorization workflow for physicians and a clearer treatment status portal for patients.</p>
+        <div class="meta case-meta">
+          <span>Role: Product Strategy, UX/UI Design, AI Workflow Design</span>
+          <span>Timeline: Hackathon Sprint</span>
+          <span>Tools: Base44, Clinical UX, Workflow Design, Prompt Design</span>
+        </div>
+      </div>
+    </section>
 
-    <section class="section-card"><h2>Problem</h2><p>Users faced authentication friction from unclear verification steps and inconsistent form behavior.</p></section>
-    <section class="section-card"><h2>Goal</h2><p>Reduce sign-in drop-off and build trust through clearer, faster access flows.</p></section>
-    <section class="section-card"><h2>Research / Process</h2><p>Mapped failure points in registration and login, then tested streamlined input states and messaging.</p><div class="image-ph">Research Artifact Placeholder</div></section>
-    <section class="section-card"><h2>Solution</h2><p>Designed AuthForm patterns with progressive disclosure, cleaner hierarchy, and confidence-building feedback.</p><div class="image-ph">Solution Mockup Placeholder</div></section>
-    <section class="section-card"><h2>Final Outcome</h2><p>Delivered a polished prototype system ready for implementation handoff.</p></section>
-    <section class="section-card"><h2>Impact</h2><p>Improved expected completion rate and reduced hesitation across critical auth steps.</p></section>
-    <section class="section-card"><h2>Reflection</h2><p>Clear microcopy and visual pacing can make secure experiences feel calm instead of stressful.</p></section>
+    <section class="section-card"><h2>The Short Version</h2><p>I designed a smarter way for clinics to prepare prior authorization requests without leaving patients in the dark. AuthForm helps clinics move from messy patient notes to payer-ready submissions using AI extraction, criteria review, denial-risk breakdowns, and editable authorization materials.</p></section>
+    <section class="section-card"><h2>Problem</h2><p>Prior authorization is not just paperwork. It can delay care. Physicians manage insurer rules, clinical documentation, safety checks, step-therapy requirements, and appeal workflows while patients often cannot see what is happening or what comes next.</p></section>
+    <section class="section-card"><h2>Goal</h2><p>Help clinics reduce preventable prior authorization delays while keeping physicians in control and giving patients plain-language visibility into treatment status.</p></section>
+    <section class="section-card"><h2>Case Context</h2><p>The test case focused on Elena Ramirez, a 29-year-old patient diagnosed with ADHD, Combined Type, with ICD-10 code F90.2. Her physician requested Vyvanse after two prior medication trials, requiring step-therapy evidence, safety screening, documentation of impairment, and a follow-up plan.</p></section>
+    <section class="section-card"><h2>Physician Portal</h2><div class="case-columns"><div><h3>Patient Intake</h3><p>Physicians can paste a flexible patient summary instead of starting with manual field-by-field entry.</p></div><div><h3>Auto-Extraction Review</h3><p>AI extracts diagnosis, ICD-10 code, medication, prior treatments, symptoms, side effects, and red flags for review.</p></div><div><h3>Insurer Criteria</h3><p>The portal maps the case against payer rules, showing what is met, not met, or risky before submission.</p></div></div><div class="image-ph case-visual">AuthForm workflow: intake → extraction → criteria review → risk breakdown → PA output</div></section>
+    <section class="section-card"><h2>Key Product Decision</h2><p>AI assists. Physicians approve. AuthForm can extract information, draft clinical rationale, identify missing documentation, and suggest stronger submission paths, but a physician or clinic staff member still reviews, edits, and approves the output before anything is finalized.</p></section>
+    <section class="section-card"><h2>Risk Review</h2><p>Instead of showing a vague approval score, AuthForm breaks denial risk into documentation completeness, step-therapy compliance, ICD-10 accuracy, safety screening, and cost risk. The score is decision support, not a guarantee.</p></section>
+    <section class="section-card"><h2>Patient Portal</h2><div class="case-columns"><div><h3>Medication Overview</h3><p>Explains purpose, dosage, common side effects, safety warnings, and previously tried medications.</p></div><div><h3>Status Tracker</h3><p>Shows the authorization process in plain language so patients know what is pending and what happens next.</p></div><div><h3>Safety &amp; Disposal</h3><p>Gives safe disposal options, controlled-substance reminders, and patient-friendly medication resources.</p></div></div></section>
+    <section class="section-card"><h2>Impact</h2><div class="case-columns four"><div><h3>Faster Case Preparation</h3><p>Clinical notes become structured authorization inputs.</p></div><div><h3>Fewer Gaps</h3><p>Missing documents and insurer requirements are surfaced earlier.</p></div><div><h3>Clearer Updates</h3><p>Patients can track status without seeing internal clinical scoring.</p></div><div><h3>Safer Follow-Through</h3><p>Medication safety guidance supports care beyond approval.</p></div></div></section>
+    <section class="section-card"><h2>Reflection</h2><p>This project taught me how to design AI for a high-trust workflow. The strongest AI use case was not replacing physicians. It was reducing repetitive work while keeping review, judgment, and approval in human hands.</p></section>
 
     <a class="back-link" href="../index.html">&larr; Back to all projects</a>
   </main>
@@ -66,6 +73,8 @@
     <a href="../index.html#contact-section">Contact</a>
   </footer>
 
-  <script src="../script.js?v=20260617-testimonials"></script>
+  <script src="../script.js?v=20260709-case-studies"></script>
 </body>
 </html>
+
+
