@@ -1398,3 +1398,166 @@ article p { margin: 0; color: var(--text-muted) !important; }
 .case-preview .tag-row span,
 .case-preview .access-btn { color: #ffffff !important; }
 
+/* Clean product-showcase previews for the project library. */
+.project-grid.editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 5vw, 3.4rem);
+}
+.project-showcase {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1.1rem, 4vw, 2rem);
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e1e1ea;
+  border-radius: clamp(22px, 3vw, 28px);
+  box-shadow: 0 18px 50px rgba(35, 35, 79, .08);
+}
+[data-theme="dark"] .project-showcase,
+.dark-mode .project-showcase {
+  background: color-mix(in srgb, var(--bg-panel) 88%, #ffffff 12%);
+  border-color: var(--border-soft);
+  box-shadow: 0 22px 56px rgba(0,0,0,.24);
+}
+.project-showcase__intro {
+  max-width: 640px;
+  margin: 0 auto clamp(1.6rem, 4vw, 2.5rem);
+}
+.project-showcase__intro .eyebrow {
+  margin-bottom: .7rem;
+  color: var(--text-muted) !important;
+  font-family: "Sora", sans-serif;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.project-showcase__intro h3 {
+  margin: 0 0 .75rem;
+  font-family: "Sora", sans-serif;
+  font-size: clamp(2.75rem, 7vw, 4.75rem);
+  line-height: .94;
+  letter-spacing: -.06em;
+  color: var(--text-heading) !important;
+}
+.project-showcase__intro p:not(.eyebrow) {
+  margin: 0;
+  color: var(--text-muted) !important;
+  font-size: clamp(1rem, 2vw, 1.12rem);
+  line-height: 1.65;
+}
+.project-showcase__visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: clamp(390px, 52vw, 560px);
+  padding: clamp(2rem, 5vw, 3rem);
+  border: 1px solid #e1e1ea;
+  border-radius: clamp(18px, 3vw, 24px);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 72% 18%, rgba(199,181,255,.22), transparent 28%),
+    linear-gradient(180deg, #fafaff 0%, #f1f1f7 100%);
+  box-shadow: none;
+}
+[data-theme="dark"] .project-showcase__visual,
+.dark-mode .project-showcase__visual {
+  background:
+    radial-gradient(circle at 70% 18%, rgba(199,181,255,.16), transparent 30%),
+    linear-gradient(180deg, #1c2049 0%, #171b3f 100%);
+  border-color: var(--border-soft);
+}
+.project-showcase .iphone-mockup {
+  width: min(300px, 70vw);
+  border-radius: 42px;
+  border-width: 10px;
+  box-shadow: 0 30px 70px rgba(35, 35, 79, .22);
+}
+.project-showcase .phone-screen {
+  padding: 2.6rem 1.15rem 1.3rem;
+}
+.project-showcase .phone-image {
+  inset: 2.45rem .7rem auto;
+  width: calc(100% - 1.4rem);
+  height: 48%;
+}
+.project-showcase__meta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .62rem;
+  margin-top: 1.3rem;
+}
+.project-showcase__meta span {
+  padding: .46rem .72rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: color-mix(in srgb, var(--bg-soft) 78%, #ffffff 22%);
+  color: var(--text-heading) !important;
+  font-size: .8rem;
+  font-weight: 800;
+}
+.case-link {
+  display: inline-block;
+  margin-top: 1.25rem;
+  color: var(--text-heading) !important;
+  font-weight: 800;
+}
+.case-link:hover,
+.case-link:focus-visible {
+  color: var(--accent-line) !important;
+  text-decoration: underline;
+  outline: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .project-showcase__visual:hover .iphone-mockup,
+  .project-showcase__visual:focus-visible .iphone-mockup {
+    transform: translateY(-7px) rotate(-1deg);
+  }
+}
+
+/* Keep case-study interiors as clean and editorial as their intro blocks. */
+.case-study .section-card,
+.case-study .artifact-section {
+  width: min(720px, 100%);
+  margin-inline: auto;
+}
+.case-study .section-card {
+  padding: clamp(2rem, 5vw, 3.25rem) 0;
+}
+.case-study .section-card h2,
+.case-study .artifact-section h2 {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  letter-spacing: -.035em;
+  line-height: 1.18;
+  margin-bottom: .8rem;
+}
+.case-study .section-card h2::after,
+.case-study .artifact-section h2::after {
+  display: none;
+}
+.case-study .section-card p {
+  max-width: 720px;
+  color: var(--text-main) !important;
+  font-size: clamp(1rem, 1.7vw, 1.08rem);
+  line-height: 1.75;
+}
+.case-study .case-columns {
+  margin-top: 1.25rem;
+}
+.case-study .case-columns > div {
+  padding: 1rem 0 0;
+  background: transparent;
+}
+.case-study .image-ph {
+  border-radius: 14px;
+  box-shadow: 0 16px 34px rgba(30,34,72,.1);
+}
+.case-study .artifact-grid img {
+  border-radius: 10px;
+}
+
+
