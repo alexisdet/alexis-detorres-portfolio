@@ -878,6 +878,131 @@ article p { margin: 0; color: var(--text-muted) !important; }
   padding: clamp(3rem, 8vw, 5rem) 0;
 }
 .case-study h1 { max-width: 920px; }
+.case-cover {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  margin: calc(clamp(3rem, 8vw, 5rem) * -1) 0 clamp(2rem, 5vw, 3rem);
+  transform: translateX(-50%);
+  min-height: clamp(280px, 44vw, 520px);
+  overflow: hidden;
+  background: #c8f2f7;
+}
+.case-cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(30,34,72,.16), transparent 20%, transparent 80%, rgba(30,34,72,.16)),
+    radial-gradient(circle at 20% 10%, rgba(199,181,255,.34), transparent 28%);
+  z-index: 1;
+  pointer-events: none;
+}
+.case-cover-art {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+.case-cover-art > img {
+  width: min(58vw, 820px);
+  max-height: 92%;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: 0 30px 70px rgba(30,34,72,.22);
+  opacity: .92;
+  transform: translateX(-20%);
+}
+.case-cover-phone {
+  position: absolute;
+  z-index: 2;
+  right: max(8vw, 32px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(22vw, 250px);
+}
+.case-phone-mini {
+  width: 100%;
+  border-width: 7px;
+  border-radius: 32px;
+}
+.mentora-cover { background: linear-gradient(135deg, #dff8fb 0%, #f8f6ff 48%, #d8ccff 100%); }
+.authform-cover { background: linear-gradient(135deg, #eef6ff 0%, #f8f6ff 45%, #dfd2ff 100%); }
+.energy-cover { background: linear-gradient(135deg, #d7f3ff 0%, #f7fbff 45%, #d8ccff 100%); }
+.divide-cover { background: linear-gradient(135deg, #f2f4ff 0%, #fbfaff 45%, #dcd2ff 100%); }
+[data-theme="dark"] .case-cover,
+.dark-mode .case-cover {
+  background: linear-gradient(135deg, #151936 0%, #1E2248 52%, #44345d 100%);
+}
+[data-theme="dark"] .case-cover-art > img,
+.dark-mode .case-cover-art > img {
+  opacity: .78;
+  filter: saturate(.9) contrast(.95);
+}
+.case-intro-block {
+  width: min(720px, 100%);
+  margin: 0 auto clamp(2.4rem, 6vw, 4rem);
+  padding-bottom: clamp(1.5rem, 4vw, 2.4rem);
+  border-bottom: 1px solid var(--border-soft);
+}
+.case-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .42rem;
+  margin-bottom: .7rem;
+}
+.case-chip-row span {
+  display: inline-flex;
+  align-items: center;
+  padding: .16rem .36rem;
+  border: 1px solid var(--border-soft);
+  color: var(--text-muted) !important;
+  font-family: "Sora", sans-serif;
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.case-intro-block h1 {
+  margin: .3rem 0 .45rem;
+  font-family: "Sora", sans-serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  letter-spacing: -.055em;
+  line-height: 1.02;
+}
+.case-intro-block p {
+  margin: 0 0 clamp(1.4rem, 4vw, 2.2rem);
+  color: var(--text-main) !important;
+  font-size: clamp(1rem, 1.9vw, 1.15rem);
+}
+.case-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+}
+.case-info-grid div {
+  min-width: 0;
+  padding: 1rem clamp(.7rem, 2vw, 1rem);
+}
+.case-info-grid div + div { border-left: 1px solid var(--border-soft); }
+.case-info-grid span {
+  display: block;
+  margin-bottom: .25rem;
+  color: var(--text-muted) !important;
+  font-family: "Sora", sans-serif;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.case-info-grid strong {
+  display: block;
+  color: var(--text-heading);
+  font-size: .83rem;
+  line-height: 1.45;
+}
 .case-hero-panel {
   position: relative;
   width: min(1180px, calc(100vw - 32px));
@@ -947,6 +1072,51 @@ article p { margin: 0; color: var(--text-muted) !important; }
   border-top: 1px solid var(--border-soft);
 }
 .section-card p { color: var(--text-main) !important; font-size: clamp(1rem, 1.8vw, 1.12rem); }
+.artifact-section {
+  padding: clamp(2.2rem, 6vw, 3.8rem) 0;
+  border-top: 1px solid var(--border-soft);
+}
+.artifact-label {
+  margin: 0 0 .25rem;
+  color: var(--text-muted) !important;
+  font-family: "Sora", sans-serif;
+  font-size: .68rem !important;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.artifact-section h2 {
+  max-width: 720px;
+  margin-bottom: 1rem;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  letter-spacing: -.035em;
+}
+.artifact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(.8rem, 2vw, 1.2rem);
+  margin-top: 1rem;
+}
+.artifact-grid figure {
+  margin: 0;
+  min-width: 0;
+}
+.artifact-grid img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  border-radius: 7px;
+  border: 1px solid var(--border-soft);
+  background: var(--bg-soft);
+  box-shadow: 0 12px 28px rgba(30,34,72,.08);
+}
+.artifact-grid figcaption {
+  margin-top: .45rem;
+  color: var(--text-muted);
+  font-size: .78rem;
+  line-height: 1.5;
+}
 .case-columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr));
@@ -1097,6 +1267,14 @@ article p { margin: 0; color: var(--text-muted) !important; }
   .case-hero-copy { max-width: none; }
   .phone-frame,
   .case-phone { width: min(70%, 260px); }
+  .case-cover-art > img {
+    width: min(76vw, 620px);
+    transform: translateX(-8%);
+  }
+  .case-cover-phone { right: 5vw; width: min(28vw, 210px); }
+  .case-info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .case-info-grid div:nth-child(3) { border-left: 0; border-top: 1px solid var(--border-soft); }
+  .case-info-grid div:nth-child(4) { border-top: 1px solid var(--border-soft); }
   .logo-wall { grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); }
 }
 
@@ -1174,6 +1352,25 @@ article p { margin: 0; color: var(--text-muted) !important; }
     padding: 1.3rem;
     border-radius: 24px;
   }
+  .case-cover {
+    min-height: 420px;
+    margin-inline: 0;
+  }
+  .case-cover-art > img {
+    width: calc(100vw - 40px);
+    max-height: 56%;
+    transform: translate(-4%, -32%);
+  }
+  .case-cover-phone {
+    right: 50%;
+    top: auto;
+    bottom: 1.2rem;
+    width: min(46vw, 180px);
+    transform: translateX(50%);
+  }
+  .case-info-grid { grid-template-columns: 1fr; }
+  .case-info-grid div + div { border-left: 0; border-top: 1px solid var(--border-soft); }
+  .artifact-grid { grid-template-columns: 1fr; }
   .phone-frame,
   .case-phone { width: min(82%, 235px); }
 }
