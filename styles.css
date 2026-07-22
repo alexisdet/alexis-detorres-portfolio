@@ -9,7 +9,7 @@
   --text-muted: #565875;
   --brand-logo: #1E2248;
   --accent-line: #1E2248;
-  --underline-accent: #c7b5ff;
+  --underline-accent: #a994f4;
   --accent-strong: #1E2248;
   --accent-red: #d84b4b;
   --border-soft: rgba(30, 34, 72, 0.26);
@@ -30,9 +30,9 @@
   --text-main: #ffffff;
   --text-muted: #f0ecff;
   --brand-logo: #ffffff;
-  --accent-line: #c7b5ff;
-  --underline-accent: #c7b5ff;
-  --accent-strong: #d9ceff;
+  --accent-line: #b7a0ff;
+  --underline-accent: #b7a0ff;
+  --accent-strong: #cbbdff;
   --accent-red: #ff8585;
   --border-soft: rgba(255, 255, 255, 0.16);
   --shadow-soft: 0 22px 58px rgba(0, 0, 0, 0.3);
@@ -110,8 +110,10 @@ main, .site-header, .cta, .site-footer, .contact-marquee { position: relative; z
 .brand { flex: 0 1 auto; min-width: 0; }
 .brand-script {
   display: block;
-  font-family: "Allura", cursive;
-  font-size: clamp(1.65rem, 3.5vw, 2.6rem);
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.02rem, 2.4vw, 1.35rem);
+  font-weight: 800;
+  letter-spacing: -.04em;
   color: #ffffff !important;
   line-height: 1;
   white-space: nowrap;
@@ -1480,6 +1482,36 @@ article p { margin: 0; color: var(--text-muted) !important; }
   flex-wrap: wrap;
   gap: .45rem;
   margin-top: 1rem;
+}
+.project-award {
+  display: inline-flex;
+  align-items: center;
+  gap: .42rem;
+  margin-top: .9rem;
+  padding: .48rem .72rem;
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--bg-panel) 88%, var(--underline-accent) 12%);
+  color: var(--text-heading) !important;
+  box-shadow: 0 10px 24px rgba(30, 34, 72, .08);
+}
+.project-award .trophy {
+  color: #b98020 !important;
+  filter: drop-shadow(0 2px 4px rgba(185, 128, 32, .25));
+}
+.project-award strong {
+  color: var(--text-heading) !important;
+  font-family: "Sora", sans-serif;
+  font-size: .78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.project-award span:last-child {
+  color: var(--text-muted) !important;
+  font-family: "Sora", sans-serif;
+  font-size: .72rem;
+  font-weight: 800;
 }
 .project-chip-row span {
   padding: .36rem .62rem;
