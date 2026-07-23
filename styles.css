@@ -547,10 +547,10 @@ article p { margin: 0; color: var(--text-muted) !important; }
   border: 0;
   box-shadow: none;
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: center;
   justify-items: center;
-  gap: clamp(2.35rem, 4.5vw, 4.2rem) clamp(1.65rem, 3.5vw, 3.4rem);
+  gap: clamp(2rem, 4vw, 3.7rem) clamp(1.35rem, 3vw, 2.8rem);
   perspective: 900px;
   transform-style: preserve-3d;
   isolation: isolate;
@@ -587,8 +587,8 @@ article p { margin: 0; color: var(--text-muted) !important; }
   position: relative;
   left: auto;
   top: auto;
-  width: clamp(108px, 10vw, 144px) !important;
-  height: clamp(72px, 6.8vw, 96px) !important;
+  width: clamp(160px, 17vw, 230px) !important;
+  height: clamp(104px, 10.5vw, 148px) !important;
   min-height: 0;
   display: grid;
   place-items: center;
@@ -605,13 +605,10 @@ article p { margin: 0; color: var(--text-muted) !important; }
     background .25s ease;
   will-change: transform;
 }
-.logo-tile:nth-child(13) {
-  grid-column: 2;
-}
 .logo-tile.has-logo { padding: 0; }
 .logo-image {
-  width: min(100%, 136px);
-  height: min(100%, 82px);
+  width: min(100%, 198px);
+  height: min(100%, 126px);
   max-width: none;
   max-height: none;
   object-fit: contain;
@@ -626,14 +623,14 @@ article p { margin: 0; color: var(--text-muted) !important; }
 .logo-image[src*="commencement-group"],
 .logo-image[src*="ryan"] {
   width: min(100%, 142px);
-  height: min(100%, 68px);
+  height: min(100%, 92px);
 }
 .logo-image[src*="harvard"],
 .logo-image[src*="university-of-houston"],
 .logo-image[src*="johns-hopkins"],
 .logo-image[src*="codepath"] {
-  width: min(100%, 104px);
-  height: min(100%, 90px);
+  width: min(100%, 152px);
+  height: min(100%, 124px);
 }
 .logo-image[src*="banana-republic"],
 .logo-image[src*="microsoft"],
@@ -641,12 +638,12 @@ article p { margin: 0; color: var(--text-muted) !important; }
 .logo-image[src*="base44"],
 .logo-image[src*="greenstar"],
 .logo-image[src*="bcg"] {
-  width: min(100%, 132px);
-  height: min(100%, 92px);
+  width: min(100%, 178px);
+  height: min(100%, 122px);
 }
 .logo-image[src*="wells-fargo"] {
-  width: min(100%, 146px);
-  height: min(100%, 96px);
+  width: min(100%, 206px);
+  height: min(100%, 132px);
 }
 .logo-tile.featured {
   box-shadow: none;
@@ -1336,7 +1333,7 @@ article p { margin: 0; color: var(--text-muted) !important; }
   .case-info-grid div:nth-child(3) { border-left: 0; border-top: 1px solid var(--border-soft); }
   .case-info-grid div:nth-child(4) { border-top: 1px solid var(--border-soft); }
   .logo-wall {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: clamp(2rem, 5vw, 3.2rem) clamp(1.25rem, 3.5vw, 2.4rem);
   }
   .logo-tile:nth-child(13) { grid-column: auto; }
@@ -1600,13 +1597,13 @@ article p { margin: 0; color: var(--text-muted) !important; }
 @media (max-width: 980px) {
   .logo-wall.magnetic-logo-wall {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 720px) {
   .logo-wall.magnetic-logo-wall {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1628,8 +1625,8 @@ article p { margin: 0; color: var(--text-muted) !important; }
     scrollbar-width: auto;
   }
   .logo-tile {
-    --logo-w: min(45vw, 154px) !important;
-    --logo-h: min(28vw, 96px) !important;
+    --logo-w: min(48vw, 178px) !important;
+    --logo-h: min(32vw, 116px) !important;
     position: relative;
     left: auto;
     top: auto;
@@ -1639,23 +1636,23 @@ article p { margin: 0; color: var(--text-muted) !important; }
     transform: translate3d(var(--mx), var(--my), var(--mz)) scale(var(--scale));
   }
   .logo-image {
-    width: min(100%, 116px);
-    height: min(100%, 74px);
+    width: min(100%, 154px);
+    height: min(100%, 100px);
   }
   .logo-image[src*="mckinsey"],
   .logo-image[src*="protiviti"],
   .logo-image[src*="develop-for-good"],
   .logo-image[src*="commencement-group"],
   .logo-image[src*="ryan"] {
-    width: min(100%, 124px);
-    height: min(100%, 58px);
+    width: min(100%, 160px);
+    height: min(100%, 76px);
   }
   .logo-image[src*="harvard"],
   .logo-image[src*="university-of-houston"],
   .logo-image[src*="johns-hopkins"],
   .logo-image[src*="codepath"] {
-    width: min(100%, 88px);
-    height: min(100%, 76px);
+    width: min(100%, 120px);
+    height: min(100%, 100px);
   }
   .logo-image[src*="banana-republic"],
   .logo-image[src*="microsoft"],
@@ -1663,12 +1660,12 @@ article p { margin: 0; color: var(--text-muted) !important; }
   .logo-image[src*="base44"],
   .logo-image[src*="greenstar"],
   .logo-image[src*="bcg"] {
-    width: min(100%, 116px);
-    height: min(100%, 82px);
+    width: min(100%, 142px);
+    height: min(100%, 98px);
   }
   .logo-image[src*="wells-fargo"] {
-    width: min(100%, 132px);
-    height: min(100%, 86px);
+    width: min(100%, 164px);
+    height: min(100%, 104px);
   }
 }
 .project-chip-row span {
