@@ -111,12 +111,13 @@ main, .site-header, .cta, .site-footer, .contact-marquee { position: relative; z
 .brand-script {
   display: block;
   font-family: "Allura", cursive;
-  font-size: clamp(1.65rem, 3.6vw, 2.45rem);
+  font-size: clamp(1.95rem, 4vw, 2.9rem);
   font-weight: 400;
   letter-spacing: .01em;
   color: #ffffff !important;
   line-height: 1;
   white-space: nowrap;
+  text-shadow: 0 0 18px rgba(199, 181, 255, .22);
 }
 .tabs {
   display: flex;
@@ -539,9 +540,9 @@ article p { margin: 0; color: var(--text-muted) !important; }
 
 .logo-wall {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: clamp(.95rem, 2vw, 1.35rem);
-  padding: clamp(.8rem, 3vw, 1.4rem) 0;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: clamp(1rem, 2.4vw, 1.7rem);
+  padding: clamp(1.2rem, 4vw, 2.4rem) 0;
   border-radius: 0;
   background: transparent !important;
   border: 0;
@@ -556,13 +557,13 @@ article p { margin: 0; color: var(--text-muted) !important; }
   --mz: 0px;
   --scale: 1;
   position: relative;
-  min-height: clamp(82px, 15vw, 104px);
+  min-height: clamp(88px, 12vw, 118px);
   display: grid;
   place-items: center;
-  border-radius: 20px;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
+  border-radius: 0;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
   overflow: hidden;
   transform: translate3d(var(--mx), var(--my), var(--mz)) scale(var(--scale));
   transition:
@@ -575,8 +576,8 @@ article p { margin: 0; color: var(--text-muted) !important; }
 .logo-tile.has-logo { padding: 10px; }
 .logo-image {
   width: 100%;
-  max-width: 108px;
-  max-height: 74px;
+  max-width: 132px;
+  max-height: 86px;
   height: auto;
   object-fit: contain;
   display: block;
@@ -593,14 +594,14 @@ article p { margin: 0; color: var(--text-muted) !important; }
 }
 .logo-tile:hover,
 .logo-tile:focus-visible {
-  background: transparent;
-  box-shadow: none;
+  background: transparent !important;
+  box-shadow: none !important;
   outline: none;
 }
 .text-logo span {
   color: var(--text-heading) !important;
   font-family: "Sora", sans-serif;
-  font-size: clamp(.9rem, 1.5vw, 1.12rem);
+  font-size: clamp(.92rem, 1.45vw, 1.18rem);
   font-weight: 900;
   letter-spacing: -.03em;
   text-align: center;
@@ -614,9 +615,9 @@ article p { margin: 0; color: var(--text-muted) !important; }
 }
 [data-theme="dark"] .logo-tile,
 .dark-mode .logo-tile {
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
 }
 .testimonial { background: transparent !important; border: none; box-shadow: none; }
 .carousel {
@@ -1288,7 +1289,7 @@ article p { margin: 0; color: var(--text-muted) !important; }
     gap: .42rem;
   }
   .brand { flex: 1 1 100%; text-align: center; }
-  .brand-script { font-size: clamp(1.45rem, 7vw, 1.7rem); white-space: normal; }
+  .brand-script { font-size: clamp(1.85rem, 8vw, 2.25rem); white-space: normal; }
   .tabs {
     flex: 1 1 100%;
     justify-content: center;
@@ -1483,27 +1484,27 @@ article p { margin: 0; color: var(--text-muted) !important; }
 }
 .project-award {
   position: absolute;
-  top: clamp(.7rem, 2vw, 1rem);
-  left: clamp(.7rem, 2vw, 1rem);
+  top: clamp(.8rem, 2vw, 1.05rem);
+  right: clamp(.8rem, 2vw, 1.05rem);
   z-index: 3;
   display: inline-flex;
   align-items: center;
   gap: .42rem;
   margin: 0;
-  padding: .48rem .72rem;
-  border: 1px solid color-mix(in srgb, var(--underline-accent) 46%, transparent);
+  padding: .54rem .78rem;
+  border: 1px solid rgba(255, 255, 255, .24);
   border-radius: 999px;
-  background: color-mix(in srgb, var(--bg-panel) 78%, transparent);
-  color: var(--text-heading) !important;
-  box-shadow: 0 12px 28px rgba(30, 34, 72, .14);
+  background: rgba(30, 34, 72, .9);
+  color: #ffffff !important;
+  box-shadow: 0 16px 34px rgba(30, 34, 72, .24);
   backdrop-filter: blur(14px);
 }
 .project-award .trophy {
-  color: #b98020 !important;
+  color: #ffd46a !important;
   filter: drop-shadow(0 2px 4px rgba(185, 128, 32, .25));
 }
 .project-award strong {
-  color: var(--text-heading) !important;
+  color: #ffffff !important;
   font-family: "Sora", sans-serif;
   font-size: .78rem;
   font-weight: 900;
@@ -1511,20 +1512,20 @@ article p { margin: 0; color: var(--text-muted) !important; }
   letter-spacing: .06em;
 }
 .project-award span:last-child {
-  color: var(--text-muted) !important;
+  color: rgba(255, 255, 255, .74) !important;
   font-family: "Sora", sans-serif;
   font-size: .72rem;
   font-weight: 800;
 }
 [data-theme="dark"] .project-award,
 .dark-mode .project-award {
-  background: rgba(23, 27, 63, .72);
+  background: rgba(255, 255, 255, .12);
   border-color: color-mix(in srgb, var(--underline-accent) 58%, transparent);
   box-shadow: 0 14px 30px rgba(0, 0, 0, .22);
 }
 
 .logo-wall.magnetic-logo-wall {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(8, minmax(0, 1fr));
 }
 
 @media (max-width: 980px) {
