@@ -541,16 +541,16 @@ article p { margin: 0; color: var(--text-muted) !important; }
 .logo-wall {
   min-height: 0;
   margin-top: clamp(1rem, 2vw, 1.8rem);
-  padding: clamp(1.25rem, 3vw, 2.75rem) 0;
+  padding: clamp(1.4rem, 3vw, 2.8rem) 0;
   border-radius: 0;
   background: transparent !important;
   border: 0;
   box-shadow: none;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   align-items: center;
   justify-items: center;
-  gap: clamp(2rem, 4vw, 3.8rem) clamp(2.25rem, 5vw, 5rem);
+  gap: clamp(2.35rem, 4.5vw, 4.2rem) clamp(1.65rem, 3.5vw, 3.4rem);
   perspective: 900px;
   transform-style: preserve-3d;
   isolation: isolate;
@@ -587,8 +587,8 @@ article p { margin: 0; color: var(--text-muted) !important; }
   position: relative;
   left: auto;
   top: auto;
-  width: clamp(132px, 13vw, 178px) !important;
-  height: clamp(82px, 8vw, 112px) !important;
+  width: clamp(108px, 10vw, 144px) !important;
+  height: clamp(72px, 6.8vw, 96px) !important;
   min-height: 0;
   display: grid;
   place-items: center;
@@ -604,6 +604,9 @@ article p { margin: 0; color: var(--text-muted) !important; }
     border-color .25s ease,
     background .25s ease;
   will-change: transform;
+}
+.logo-tile:nth-child(13) {
+  grid-column: 2;
 }
 .logo-tile.has-logo { padding: 0; }
 .logo-image {
@@ -1305,9 +1308,10 @@ article p { margin: 0; color: var(--text-muted) !important; }
   .case-info-grid div:nth-child(3) { border-left: 0; border-top: 1px solid var(--border-soft); }
   .case-info-grid div:nth-child(4) { border-top: 1px solid var(--border-soft); }
   .logo-wall {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(1.8rem, 5vw, 3rem) clamp(1.4rem, 4vw, 2.6rem);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(2rem, 5vw, 3.2rem) clamp(1.25rem, 3.5vw, 2.4rem);
   }
+  .logo-tile:nth-child(13) { grid-column: auto; }
 }
 
 @media (max-width: 720px) {
@@ -1337,8 +1341,8 @@ article p { margin: 0; color: var(--text-muted) !important; }
   .hero-copy { max-width: 34rem; }
   .marquee { min-width: 760px; }
   .logo-wall {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(1.5rem, 6vw, 2.4rem) clamp(1.15rem, 5vw, 1.9rem);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.45rem, 5vw, 2.25rem) clamp(1rem, 4vw, 1.7rem);
   }
   .carousel { padding-inline: 0; padding-bottom: 3.8rem; }
   .testimonial-card { flex-basis: 100%; }
@@ -1568,6 +1572,12 @@ article p { margin: 0; color: var(--text-muted) !important; }
 @media (max-width: 980px) {
   .logo-wall.magnetic-logo-wall {
     display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .logo-wall.magnetic-logo-wall {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
@@ -1575,22 +1585,29 @@ article p { margin: 0; color: var(--text-muted) !important; }
 @media (max-width: 640px) {
   .logo-wall.magnetic-logo-wall {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, clamp(72px, 22vw, 92px));
+    grid-auto-columns: clamp(124px, 36vw, 148px);
     align-items: center;
     justify-items: center;
-    gap: clamp(1.7rem, 7vw, 2.4rem) clamp(1.2rem, 5vw, 1.9rem);
+    gap: clamp(1.25rem, 5vw, 1.8rem) clamp(1.4rem, 6vw, 2.2rem);
     min-height: 0;
-    overflow: visible;
-    padding: clamp(.5rem, 2vw, 1rem) 0;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: clamp(.75rem, 3vw, 1rem) .2rem 1.15rem;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
   }
   .logo-tile {
-    --logo-w: clamp(112px, 36vw, 146px) !important;
-    --logo-h: clamp(70px, 22vw, 92px) !important;
+    --logo-w: clamp(112px, 33vw, 136px) !important;
+    --logo-h: clamp(70px, 20vw, 86px) !important;
     position: relative;
     left: auto;
     top: auto;
     width: var(--logo-w) !important;
     height: var(--logo-h) !important;
+    scroll-snap-align: center;
     transform: translate3d(var(--mx), var(--my), var(--mz)) scale(var(--scale));
   }
   .logo-image {
