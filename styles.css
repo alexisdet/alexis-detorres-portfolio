@@ -558,8 +558,8 @@ article p { margin: 0; color: var(--text-muted) !important; }
   content: "";
   position: absolute;
   width: clamp(160px, 22vw, 320px);
-  aspect-ratio: 1 / 1;
-  border-radius: 999px;
+  height: clamp(120px, 16vw, 240px);
+  border-radius: 44% 56% 61% 39%;
   background: color-mix(in srgb, var(--underline-accent) 28%, transparent);
   filter: blur(56px);
   opacity: .28;
@@ -599,6 +599,29 @@ article p { margin: 0; color: var(--text-muted) !important; }
   will-change: transform;
 }
 .logo-tile.has-logo { padding: 0; }
+.logo-tile::before,
+.logo-tile::after {
+  content: "";
+  position: absolute;
+  background: color-mix(in srgb, var(--underline-accent) 42%, transparent);
+  opacity: .36;
+  pointer-events: none;
+  z-index: 1;
+}
+.logo-tile::before {
+  top: 50%;
+  right: -34%;
+  width: 68%;
+  height: 1px;
+  transform: translateY(-50%);
+}
+.logo-tile::after {
+  left: 50%;
+  bottom: -34%;
+  width: 1px;
+  height: 68%;
+  transform: translateX(-50%);
+}
 .logo-image {
   width: clamp(142px, 12vw, 196px);
   height: clamp(90px, 7.6vw, 124px);
@@ -609,13 +632,6 @@ article p { margin: 0; color: var(--text-muted) !important; }
   position: relative;
   z-index: 2;
   filter: saturate(.98) contrast(1.02) drop-shadow(0 10px 16px rgba(30, 34, 72, .12));
-}
-.logo-image-wide {
-  width: clamp(142px, 12vw, 196px);
-  height: clamp(90px, 7.6vw, 124px);
-}
-.logo-tile::after {
-  content: none;
 }
 .logo-tile.featured {
   box-shadow: none;
@@ -646,6 +662,13 @@ article p { margin: 0; color: var(--text-muted) !important; }
   background: transparent !important;
   border-color: transparent !important;
   box-shadow: none !important;
+}
+[data-theme="dark"] .logo-tile::before,
+[data-theme="dark"] .logo-tile::after,
+.dark-mode .logo-tile::before,
+.dark-mode .logo-tile::after {
+  background: color-mix(in srgb, var(--underline-accent) 36%, transparent);
+  opacity: .28;
 }
 .testimonial { background: transparent !important; border: none; box-shadow: none; }
 .carousel {
@@ -1565,6 +1588,16 @@ article p { margin: 0; color: var(--text-muted) !important; }
 @media (max-width: 640px) {
   .logo-wall.magnetic-logo-wall {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .logo-tile::before {
+    width: 44%;
+    right: -22%;
+    opacity: .26;
+  }
+  .logo-tile::after {
+    height: 44%;
+    bottom: -22%;
+    opacity: .26;
   }
 }
 .project-chip-row span {
