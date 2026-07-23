@@ -550,7 +550,7 @@ article p { margin: 0; color: var(--text-muted) !important; }
   grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: center;
   justify-items: center;
-  gap: clamp(2rem, 4vw, 3.7rem) clamp(1.35rem, 3vw, 2.8rem);
+  gap: clamp(1.05rem, 2.2vw, 2rem) clamp(.55rem, 1.5vw, 1.35rem);
   perspective: 900px;
   transform-style: preserve-3d;
   isolation: isolate;
@@ -1334,7 +1334,7 @@ article p { margin: 0; color: var(--text-muted) !important; }
   .case-info-grid div:nth-child(4) { border-top: 1px solid var(--border-soft); }
   .logo-wall {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(2rem, 5vw, 3.2rem) clamp(1.25rem, 3.5vw, 2.4rem);
+    gap: clamp(1rem, 3.4vw, 1.8rem) clamp(.45rem, 1.8vw, 1rem);
   }
   .logo-tile:nth-child(13) { grid-column: auto; }
 }
@@ -1367,7 +1367,7 @@ article p { margin: 0; color: var(--text-muted) !important; }
   .marquee { min-width: 760px; }
   .logo-wall {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(1.45rem, 5vw, 2.25rem) clamp(1rem, 4vw, 1.7rem);
+    gap: clamp(.85rem, 3vw, 1.45rem) clamp(.25rem, 1.6vw, .8rem);
   }
   .carousel { padding-inline: 0; padding-bottom: 3.8rem; }
   .testimonial-card { flex-basis: 100%; }
@@ -1616,7 +1616,7 @@ article p { margin: 0; color: var(--text-muted) !important; }
     grid-auto-columns: initial;
     align-items: center;
     justify-items: center;
-    gap: .18rem .28rem;
+    gap: .02rem .04rem;
     min-height: 0;
     overflow-x: visible;
     overflow-y: visible;
