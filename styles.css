@@ -575,11 +575,11 @@ article p { margin: 0; color: var(--text-muted) !important; }
     background .25s ease;
   will-change: transform;
 }
-.logo-tile.has-logo { padding: clamp(14px, 1.8vw, 24px); }
+.logo-tile.has-logo { padding: clamp(8px, 1.1vw, 15px); }
 .logo-image {
   width: 100%;
-  max-width: 78%;
-  max-height: 68%;
+  max-width: 90%;
+  max-height: 82%;
   height: auto;
   object-fit: contain;
   display: block;
@@ -587,7 +587,7 @@ article p { margin: 0; color: var(--text-muted) !important; }
   z-index: 2;
   filter: saturate(.98) contrast(1.02) drop-shadow(0 10px 16px rgba(30, 34, 72, .12));
 }
-.logo-image-wide { max-width: 82%; max-height: 54%; }
+.logo-image-wide { max-width: 94%; max-height: 70%; }
 .logo-tile::after {
   content: none;
 }
