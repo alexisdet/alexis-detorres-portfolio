@@ -129,13 +129,13 @@ function initCompanyLogoMagnet() {
         const dx = event.clientX - iconX;
         const dy = event.clientY - iconY;
         const distance = Math.hypot(dx, dy);
-        const strength = Math.max(0, 1 - distance / 170);
-        const pull = strength * 0.18;
+        const strength = Math.max(0, 1 - distance / 150);
+        const pull = strength * 0.035;
 
         icon.style.setProperty("--mx", `${dx * pull}px`);
         icon.style.setProperty("--my", `${dy * pull}px`);
-        icon.style.setProperty("--mz", `${strength * 38}px`);
-        icon.style.setProperty("--scale", `${1 + strength * 0.18}`);
+        icon.style.setProperty("--mz", `${strength * 10}px`);
+        icon.style.setProperty("--scale", `${1 + strength * 0.08}`);
       });
     });
   });

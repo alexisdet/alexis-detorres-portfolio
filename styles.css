@@ -540,7 +540,7 @@ article p { margin: 0; color: var(--text-muted) !important; }
 
 .logo-wall {
   display: grid;
-  grid-template-columns: repeat(5, minmax(132px, 1fr));
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
   gap: clamp(1.2rem, 2.8vw, 2rem);
   padding: clamp(1.8rem, 4.5vw, 3rem) clamp(.4rem, 2vw, 1rem);
   border-radius: 0;
@@ -582,7 +582,7 @@ article p { margin: 0; color: var(--text-muted) !important; }
   --scale: 1;
   position: relative;
   width: 100%;
-  min-height: clamp(98px, 12vw, 138px);
+  min-height: clamp(104px, 12vw, 132px);
   display: grid;
   place-items: center;
   border-radius: 0;
@@ -599,32 +599,9 @@ article p { margin: 0; color: var(--text-muted) !important; }
   will-change: transform;
 }
 .logo-tile.has-logo { padding: 0; }
-.logo-tile::before,
-.logo-tile::after {
-  content: "";
-  position: absolute;
-  background: color-mix(in srgb, var(--underline-accent) 42%, transparent);
-  opacity: .36;
-  pointer-events: none;
-  z-index: 1;
-}
-.logo-tile::before {
-  top: 50%;
-  right: -34%;
-  width: 68%;
-  height: 1px;
-  transform: translateY(-50%);
-}
-.logo-tile::after {
-  left: 50%;
-  bottom: -34%;
-  width: 1px;
-  height: 68%;
-  transform: translateX(-50%);
-}
 .logo-image {
-  width: clamp(142px, 12vw, 196px);
-  height: clamp(90px, 7.6vw, 124px);
+  width: clamp(132px, 11vw, 176px);
+  height: clamp(86px, 7vw, 112px);
   max-width: none;
   max-height: none;
   object-fit: contain;
@@ -662,13 +639,6 @@ article p { margin: 0; color: var(--text-muted) !important; }
   background: transparent !important;
   border-color: transparent !important;
   box-shadow: none !important;
-}
-[data-theme="dark"] .logo-tile::before,
-[data-theme="dark"] .logo-tile::after,
-.dark-mode .logo-tile::before,
-.dark-mode .logo-tile::after {
-  background: color-mix(in srgb, var(--underline-accent) 36%, transparent);
-  opacity: .28;
 }
 .testimonial { background: transparent !important; border: none; box-shadow: none; }
 .carousel {
@@ -1576,7 +1546,7 @@ article p { margin: 0; color: var(--text-muted) !important; }
 }
 
 .logo-wall.magnetic-logo-wall {
-  grid-template-columns: repeat(5, minmax(132px, 1fr));
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
 }
 
 @media (max-width: 980px) {
@@ -1588,16 +1558,6 @@ article p { margin: 0; color: var(--text-muted) !important; }
 @media (max-width: 640px) {
   .logo-wall.magnetic-logo-wall {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .logo-tile::before {
-    width: 44%;
-    right: -22%;
-    opacity: .26;
-  }
-  .logo-tile::after {
-    height: 44%;
-    bottom: -22%;
-    opacity: .26;
   }
 }
 .project-chip-row span {
