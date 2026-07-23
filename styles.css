@@ -540,9 +540,9 @@ article p { margin: 0; color: var(--text-muted) !important; }
 
 .logo-wall {
   display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
-  gap: clamp(1rem, 2.4vw, 1.7rem);
-  padding: clamp(1.2rem, 4vw, 2.4rem) 0;
+  grid-template-columns: repeat(5, minmax(132px, 1fr));
+  gap: clamp(1.2rem, 2.8vw, 2rem);
+  padding: clamp(1.8rem, 4.5vw, 3rem) clamp(.4rem, 2vw, 1rem);
   border-radius: 0;
   background: transparent !important;
   border: 0;
@@ -550,6 +550,30 @@ article p { margin: 0; color: var(--text-muted) !important; }
   perspective: 900px;
   transform-style: preserve-3d;
   isolation: isolate;
+  position: relative;
+  overflow: hidden;
+}
+.logo-wall::before,
+.logo-wall::after {
+  content: "";
+  position: absolute;
+  width: clamp(160px, 22vw, 320px);
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--underline-accent) 28%, transparent);
+  filter: blur(56px);
+  opacity: .28;
+  pointer-events: none;
+  z-index: -1;
+}
+.logo-wall::before {
+  top: -18%;
+  left: -8%;
+}
+.logo-wall::after {
+  right: -10%;
+  bottom: -22%;
+  opacity: .2;
 }
 .logo-tile {
   --mx: 0px;
@@ -558,15 +582,14 @@ article p { margin: 0; color: var(--text-muted) !important; }
   --scale: 1;
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  min-height: 0;
+  min-height: clamp(98px, 12vw, 138px);
   display: grid;
   place-items: center;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--bg-main) 92%, var(--bg-soft) 8%) !important;
+  border-radius: 0;
+  background: transparent !important;
   border: 0 !important;
-  box-shadow: 0 16px 36px rgba(30, 34, 72, .08) !important;
-  overflow: hidden;
+  box-shadow: none !important;
+  overflow: visible;
   transform: translate3d(var(--mx), var(--my), var(--mz)) scale(var(--scale));
   transition:
     transform .34s cubic-bezier(.2,.85,.2,1),
@@ -575,19 +598,22 @@ article p { margin: 0; color: var(--text-muted) !important; }
     background .25s ease;
   will-change: transform;
 }
-.logo-tile.has-logo { padding: clamp(4px, .75vw, 10px); }
+.logo-tile.has-logo { padding: 0; }
 .logo-image {
-  width: 100%;
-  max-width: 96%;
-  max-height: 90%;
-  height: auto;
+  width: clamp(142px, 12vw, 196px);
+  height: clamp(90px, 7.6vw, 124px);
+  max-width: none;
+  max-height: none;
   object-fit: contain;
   display: block;
   position: relative;
   z-index: 2;
   filter: saturate(.98) contrast(1.02) drop-shadow(0 10px 16px rgba(30, 34, 72, .12));
 }
-.logo-image-wide { max-width: 98%; max-height: 82%; }
+.logo-image-wide {
+  width: clamp(142px, 12vw, 196px);
+  height: clamp(90px, 7.6vw, 124px);
+}
 .logo-tile::after {
   content: none;
 }
@@ -596,8 +622,8 @@ article p { margin: 0; color: var(--text-muted) !important; }
 }
 .logo-tile:hover,
 .logo-tile:focus-visible {
-  background: color-mix(in srgb, var(--bg-main) 88%, var(--underline-accent) 12%) !important;
-  box-shadow: 0 20px 42px rgba(30, 34, 72, .12) !important;
+  background: transparent !important;
+  box-shadow: none !important;
   outline: none;
 }
 .text-logo span {
@@ -617,9 +643,9 @@ article p { margin: 0; color: var(--text-muted) !important; }
 }
 [data-theme="dark"] .logo-tile,
 .dark-mode .logo-tile {
-  background: rgba(255, 255, 255, .06) !important;
+  background: transparent !important;
   border-color: transparent !important;
-  box-shadow: 0 18px 42px rgba(0, 0, 0, .16) !important;
+  box-shadow: none !important;
 }
 .testimonial { background: transparent !important; border: none; box-shadow: none; }
 .carousel {
