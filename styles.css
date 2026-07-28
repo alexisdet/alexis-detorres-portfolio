@@ -2048,3 +2048,73 @@ article p { margin: 0; color: var(--text-muted) !important; }
     transform: rotateX(2deg) rotateY(-2deg) translateZ(18px);
   }
 }
+
+/* AdaptAI stage fix: force the hero to render as a visible full-screen 3D cover. */
+main.case-study > section.case-cover.divide-cover {
+  width: 100vw !important;
+  min-height: calc(100vh - 112px) !important;
+  left: 50% !important;
+  margin: 0 0 clamp(3rem, 7vw, 5rem) !important;
+  transform: translateX(-50%) !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: clamp(1.5rem, 4vw, 3rem) !important;
+  overflow: hidden !important;
+  perspective: 1400px !important;
+  background-color: #171b3f !important;
+  background-image:
+    radial-gradient(circle at 18% 14%, rgba(199, 181, 255, .55), transparent 28%),
+    radial-gradient(circle at 82% 35%, rgba(244, 193, 213, .36), transparent 34%),
+    linear-gradient(135deg, #111632 0%, #1E2248 48%, #4a355f 100%) !important;
+  box-shadow: inset 0 -90px 120px rgba(0, 0, 0, .25) !important;
+}
+
+main.case-study > section.case-cover.divide-cover .case-cover-art {
+  position: relative !important;
+  inset: auto !important;
+  width: min(94vw, 1480px) !important;
+  height: min(78vh, 780px) !important;
+  display: grid !important;
+  place-items: center !important;
+  transform: rotateX(3deg) rotateY(-4deg) translateZ(32px) !important;
+  transform-style: preserve-3d !important;
+}
+
+main.case-study > section.case-cover.divide-cover .case-cover-art > img {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  padding: clamp(.8rem, 2vw, 1.4rem) !important;
+  border-radius: clamp(24px, 3vw, 44px) !important;
+  background: rgba(255, 252, 246, .96) !important;
+  opacity: 1 !important;
+  filter: saturate(1.06) contrast(1.04) !important;
+  box-shadow:
+    0 50px 130px rgba(0, 0, 0, .44),
+    0 14px 36px rgba(199, 181, 255, .30) !important;
+  transform: translateZ(54px) !important;
+}
+
+@media (max-width: 760px) {
+  main.case-study > section.case-cover.divide-cover {
+    min-height: 78vh !important;
+    padding: 1rem !important;
+  }
+
+  main.case-study > section.case-cover.divide-cover .case-cover-art {
+    width: 94vw !important;
+    height: 62vh !important;
+    transform: rotateX(1.5deg) rotateY(-2deg) translateZ(18px) !important;
+  }
+}
+
+/* Case pages should open directly into the visual hero, not a blank spacer. */
+main.case-study {
+  padding-top: 0 !important;
+}
+
+main.case-study > section.case-cover.divide-cover {
+  min-height: calc(100vh - 96px) !important;
+}
