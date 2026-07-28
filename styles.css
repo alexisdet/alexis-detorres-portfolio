@@ -1960,3 +1960,91 @@ article p { margin: 0; color: var(--text-muted) !important; }
   }
   .case-cover { min-height: 190px; }
 }
+
+/* Full-screen case-study opening image stage. Placed last so it overrides older case-cover rules. */
+.case-study > .case-cover {
+  min-height: calc(100vh - 28px);
+  width: 100vw;
+  left: 50%;
+  margin: calc(clamp(3rem, 8vw, 5rem) * -1) 0 clamp(3rem, 7vw, 5rem);
+  transform: translateX(-50%);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  perspective: 1200px;
+  background:
+    radial-gradient(circle at 22% 18%, rgba(214, 198, 255, .42), transparent 30%),
+    radial-gradient(circle at 78% 36%, rgba(245, 203, 219, .30), transparent 32%),
+    linear-gradient(135deg, #171b3f 0%, #1E2248 42%, #4a365f 100%);
+  box-shadow: inset 0 -80px 120px rgba(0, 0, 0, .22);
+}
+
+.case-study > .case-cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, rgba(255,255,255,.16), transparent 28%, rgba(255,255,255,.08) 55%, transparent 82%),
+    radial-gradient(circle at 50% 115%, rgba(199,181,255,.38), transparent 42%);
+  mix-blend-mode: screen;
+}
+
+.case-study > .case-cover::after {
+  content: "";
+  position: absolute;
+  inset: 7vw 7vw auto auto;
+  width: min(34vw, 460px);
+  height: min(34vw, 460px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.18), transparent 66%);
+  filter: blur(10px);
+  transform: translateZ(-80px);
+  pointer-events: none;
+}
+
+.case-study > .case-cover .case-cover-art {
+  position: relative;
+  z-index: 2;
+  width: min(92vw, 1320px);
+  height: min(78vh, 760px);
+  display: grid;
+  place-items: center;
+  transform: rotateX(4deg) rotateY(-5deg) translateZ(28px);
+  transform-style: preserve-3d;
+}
+
+.case-study > .case-cover .case-cover-art > img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  border-radius: clamp(24px, 3vw, 44px);
+  opacity: 1;
+  filter: saturate(1.05) contrast(1.03);
+  box-shadow:
+    0 44px 120px rgba(0, 0, 0, .38),
+    0 12px 36px rgba(199, 181, 255, .24),
+    inset 0 0 0 1px rgba(255,255,255,.38);
+  transform: translateZ(42px);
+}
+
+[data-theme="dark"] .case-study > .case-cover .case-cover-art > img,
+.dark-mode .case-study > .case-cover .case-cover-art > img {
+  opacity: 1;
+  filter: saturate(1.08) contrast(1.05);
+}
+
+@media (max-width: 760px) {
+  .case-study > .case-cover {
+    min-height: 86vh;
+    margin-top: calc(clamp(3rem, 8vw, 5rem) * -1);
+  }
+
+  .case-study > .case-cover .case-cover-art {
+    width: 92vw;
+    height: 68vh;
+    transform: rotateX(2deg) rotateY(-2deg) translateZ(18px);
+  }
+}
