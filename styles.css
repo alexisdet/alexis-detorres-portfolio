@@ -2160,3 +2160,72 @@ main.case-study > section.case-cover.divide-cover {
     padding: .85rem;
   }
 }
+
+/* Case study hero correction: keep the main image contained, not full-screen. */
+main.case-study > section.case-cover,
+.case-study > .case-cover,
+main.case-study > section.case-cover.divide-cover {
+  width: min(1120px, calc(100vw - 32px)) !important;
+  left: auto !important;
+  margin: clamp(1.25rem, 3vw, 2rem) auto clamp(2rem, 5vw, 3.5rem) !important;
+  transform: none !important;
+  min-height: 0 !important;
+  height: auto !important;
+  aspect-ratio: 16 / 8.2 !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: clamp(1rem, 2.5vw, 1.75rem) !important;
+  border-radius: clamp(24px, 3vw, 38px) !important;
+  overflow: hidden !important;
+  perspective: none !important;
+  box-shadow: 0 28px 70px rgba(30, 34, 72, .18) !important;
+}
+
+main.case-study > section.case-cover .case-cover-art,
+.case-study > .case-cover .case-cover-art,
+main.case-study > section.case-cover.divide-cover .case-cover-art {
+  position: relative !important;
+  inset: auto !important;
+  z-index: 2 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: grid !important;
+  place-items: center !important;
+  transform: none !important;
+  transform-style: flat !important;
+}
+
+main.case-study > section.case-cover .case-cover-art > img,
+.case-study > .case-cover .case-cover-art > img,
+main.case-study > section.case-cover.divide-cover .case-cover-art > img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  padding: 0 !important;
+  border-radius: clamp(18px, 2.4vw, 28px) !important;
+  background: transparent !important;
+  transform: none !important;
+  opacity: 1 !important;
+  box-shadow: 0 18px 46px rgba(30, 34, 72, .16) !important;
+}
+
+main.case-study > section.case-cover.divide-cover .case-cover-art > img {
+  object-fit: contain !important;
+  background: rgba(255, 252, 246, .94) !important;
+  padding: clamp(.55rem, 1.5vw, 1rem) !important;
+}
+
+@media (max-width: 760px) {
+  main.case-study > section.case-cover,
+  .case-study > .case-cover,
+  main.case-study > section.case-cover.divide-cover {
+    width: min(100% - 20px, 680px) !important;
+    aspect-ratio: 4 / 3 !important;
+    padding: .75rem !important;
+    margin-top: 1rem !important;
+  }
+}
