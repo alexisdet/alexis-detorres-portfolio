@@ -2118,3 +2118,45 @@ main.case-study {
 main.case-study > section.case-cover.divide-cover {
   min-height: calc(100vh - 96px) !important;
 }
+
+/* Keep home page case-study previews contained inside their rounded frames. */
+.projects-page .project-thumb {
+  isolation: isolate;
+  contain: paint;
+  aspect-ratio: 1.42 / 1;
+  padding: clamp(.85rem, 2.4vw, 1.45rem);
+}
+
+.projects-page .project-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: calc(clamp(18px, 3vw, 26px) - 10px);
+  clip-path: inset(0 round calc(clamp(18px, 3vw, 26px) - 10px));
+}
+
+.projects-page .divide-thumb img,
+.projects-page .authform-thumb img,
+.projects-page .mentora-thumb img,
+.projects-page .energy-thumb img {
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .projects-page .project-tile-link:hover img,
+  .projects-page .project-tile-link:focus-visible img {
+    transform: scale(1.035);
+  }
+}
+
+@media (max-width: 760px) {
+  .projects-page .project-thumb {
+    aspect-ratio: 1.35 / 1;
+    padding: .85rem;
+  }
+}
