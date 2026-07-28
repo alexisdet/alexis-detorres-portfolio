@@ -2229,3 +2229,88 @@ main.case-study > section.case-cover.divide-cover .case-cover-art > img {
     margin-top: 1rem !important;
   }
 }
+
+/* Final case hero sizing pass: smaller, centered, and consistent across all case pages. */
+body main.case-study > section.case-cover,
+body .case-study > section.case-cover,
+body main.case-study > section.case-cover.divide-cover,
+body main.case-study > section.case-cover.mentora-cover,
+body main.case-study > section.case-cover.authform-cover,
+body main.case-study > section.case-cover.energy-cover {
+  box-sizing: border-box !important;
+  width: min(760px, calc(100vw - 40px)) !important;
+  max-width: 760px !important;
+  left: auto !important;
+  right: auto !important;
+  margin: 1.75rem auto 2.75rem auto !important;
+  transform: none !important;
+  min-height: 0 !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: .85rem !important;
+  border-radius: 28px !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+body main.case-study > section.case-cover .case-cover-art,
+body .case-study > section.case-cover .case-cover-art,
+body main.case-study > section.case-cover.divide-cover .case-cover-art {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  position: relative !important;
+  inset: auto !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  place-items: center !important;
+  transform: none !important;
+}
+
+body main.case-study > section.case-cover .case-cover-art > img,
+body .case-study > section.case-cover .case-cover-art > img,
+body main.case-study > section.case-cover.divide-cover .case-cover-art > img {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  min-width: 0 !important;
+  display: block !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  border-radius: 18px !important;
+  transform: none !important;
+}
+
+body main.case-study > section.case-cover.divide-cover .case-cover-art > img {
+  padding: .45rem !important;
+  background: rgba(255, 252, 246, .95) !important;
+}
+
+@media (min-width: 1180px) {
+  body main.case-study > section.case-cover,
+  body .case-study > section.case-cover,
+  body main.case-study > section.case-cover.divide-cover {
+    width: 720px !important;
+    max-width: 720px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  body main.case-study > section.case-cover,
+  body .case-study > section.case-cover,
+  body main.case-study > section.case-cover.divide-cover {
+    width: min(92vw, 520px) !important;
+    max-width: 520px !important;
+    aspect-ratio: 4 / 3 !important;
+    padding: .65rem !important;
+    margin: 1rem auto 2rem auto !important;
+  }
+}
