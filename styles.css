@@ -2314,3 +2314,44 @@ body main.case-study > section.case-cover.divide-cover .case-cover-art > img {
     margin: 1rem auto 2rem auto !important;
   }
 }
+
+/* Match AdaptAI and Mentora case hero image sizing to UH Energy. */
+body main.case-study > section.case-cover.divide-cover .case-cover-art > img,
+body main.case-study > section.case-cover.mentora-cover .case-cover-art > img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border-radius: 18px !important;
+}
+
+body main.case-study > section.case-cover.divide-cover,
+body main.case-study > section.case-cover.mentora-cover,
+body main.case-study > section.case-cover.energy-cover {
+  width: min(760px, calc(100vw - 40px)) !important;
+  max-width: 760px !important;
+  aspect-ratio: 16 / 9 !important;
+  padding: .85rem !important;
+}
+
+@media (min-width: 1180px) {
+  body main.case-study > section.case-cover.divide-cover,
+  body main.case-study > section.case-cover.mentora-cover,
+  body main.case-study > section.case-cover.energy-cover {
+    width: 720px !important;
+    max-width: 720px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  body main.case-study > section.case-cover.divide-cover,
+  body main.case-study > section.case-cover.mentora-cover,
+  body main.case-study > section.case-cover.energy-cover {
+    width: min(92vw, 520px) !important;
+    max-width: 520px !important;
+    aspect-ratio: 4 / 3 !important;
+    padding: .65rem !important;
+  }
+}
