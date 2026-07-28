@@ -2355,3 +2355,52 @@ body main.case-study > section.case-cover.energy-cover {
     padding: .65rem !important;
   }
 }
+
+/* Explicit compact sizing for AdaptAI and Mentora first case-study images. */
+main.case-study > section.case-cover.compact-case-cover {
+  width: min(520px, calc(100vw - 48px)) !important;
+  max-width: 520px !important;
+  min-height: 0 !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  margin: 1.25rem auto 2.25rem !important;
+  padding: .55rem !important;
+  display: grid !important;
+  place-items: center !important;
+  left: auto !important;
+  transform: none !important;
+  border-radius: 22px !important;
+  overflow: hidden !important;
+}
+
+main.case-study > section.case-cover.compact-case-cover .case-cover-art {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  inset: auto !important;
+  transform: none !important;
+  display: grid !important;
+  place-items: center !important;
+}
+
+main.case-study > section.case-cover.compact-case-cover .case-cover-art > img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  transform: none !important;
+  border-radius: 16px !important;
+  background: transparent !important;
+}
+
+@media (max-width: 760px) {
+  main.case-study > section.case-cover.compact-case-cover {
+    width: min(88vw, 420px) !important;
+    max-width: 420px !important;
+    aspect-ratio: 4 / 3 !important;
+  }
+}
