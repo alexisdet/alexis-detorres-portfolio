@@ -1,7 +1,7 @@
 const quotes = [
-  { text: "In less than two weeks on a live complex account, Alexis demonstrated exceptional initiative and ownership. She quickly understood campaign operations, anticipated project needs, and consistently delivered high quality work with minimal direction. Her ability to organize complex workflows and improve team efficiency made an immediate impact.", by: "Protiviti Manager" },
+  { text: "In less than two weeks on a live complex account, Alexis demonstrated exceptional initiative and ownership. She quickly understood campaign operations, anticipated project needs, and consistently delivered high quality work with minimal direction. Her ability to organize complex workflows and improve team efficiency made an immediate impact.", by: "Protiviti, Senior Manager" },
   { text: "Alexis brought a quality over quantity mindset to every project. She asked thoughtful questions, proactively identified opportunities for improvement, and consistently went beyond assigned responsibilities.", by: "Ryan, Senior Consultant" },
-  { text: "Alexis was the top student in my physics class, standing out for her academic performance, persistence, and analytical thinking. She approached challenging problems with discipline and creativity.", by: "Professor Liming Le" }
+  { text: "Alexis was the top student in my physics class, standing out for her academic performance, persistence, and analytical thinking.", by: "Professor Liming Le" }
 ];
 
 let quoteIndex = 0;
