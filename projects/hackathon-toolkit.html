@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Anton&family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=20260801-uh-energy-case" />
+  <link rel="stylesheet" href="../styles.css?v=20260801-mentora-images" />
 </head>
 <body class="dark-mode">
   <header class="site-header">
@@ -25,7 +25,7 @@
   <main class="case-study">
     <section class="case-cover mentora-cover compact-case-cover">
       <div class="case-cover-art">
-        <img src="../assets/projects/project-2.png" alt="Mentora academic planning product preview" loading="lazy" />
+        <img src="../assets/projects/mentora/login.png" alt="Mentora academic planning product preview" loading="lazy" />
       </div>
     </section>
 
@@ -57,7 +57,10 @@
       <p class="artifact-label">Student Research</p>
       <h2>I synthesized 10+ interviews into the product areas students repeated most</h2>
       <p>Across interviews, the strongest signals were about scattered deadlines, uncertainty around grading policies, calendar friction, and the mental load of constantly checking multiple academic systems. Students did not ask for a broad AI chatbot first. They asked for something that would remove the repetitive setup work and help them understand what to focus on.</p>
-      <figure class="case-big-visual"><img src="../assets/projects/project-2.png" alt="Mentora academic planning interface concept"><figcaption>Current placeholder visual for Mentora. This can later be replaced with final syllabus upload, dashboard, Demi assistant, calendar, and grade forecasting screens.</figcaption></figure>
+      <div class="case-image-grid persona-grid">
+        <figure><img src="../assets/projects/mentora/persona-aidan.png" alt="Mentora student persona Aidan"><figcaption>Aidan represented students who juggle multiple systems, miss smaller assignments, and need academic information translated into one clear plan.</figcaption></figure>
+        <figure><img src="../assets/projects/mentora/persona-max.png" alt="Mentora student persona Max"><figcaption>Max represented honors students balancing leadership, work, and course load who needed prioritization support and reliable reminders.</figcaption></figure>
+      </div>
       <div class="case-summary-grid"><div><span>Insight 01</span><h3>Planning Breaks at Setup</h3><p>The hardest part was not checking a calendar. It was turning raw syllabus information into a calendar students trusted.</p></div><div><span>Insight 02</span><h3>Students Need Translation</h3><p>Dense documents needed to become deadlines, grade rules, study tasks, and class-specific answers.</p></div><div><span>Insight 03</span><h3>Trust Matters More Than Magic</h3><p>For AI to be useful in academics, students needed clear outputs they could review, edit, and rely on.</p></div></div>
     </section>
 
@@ -80,6 +83,7 @@
       <h2>Drop in a syllabus. Get back a semester plan.</h2>
       <p>Mentora starts with the source document students already receive: the syllabus. After upload, the system extracts relevant course information and creates synced class cards. From there, the student can open a course, review assignments, add deadlines to a calendar, calculate grade standing, forecast final grade requirements, or ask Demi questions about class-specific details.</p>
       <div class="case-summary-grid"><div><span>01</span><h3>Extract</h3><p>Pull course names, assignments, deadlines, grading weights, exam dates, attendance policies, and instructor expectations.</p></div><div><span>02</span><h3>Organize</h3><p>Convert extracted information into course pages, upcoming tasks, calendar events, and grade modules.</p></div><div><span>03</span><h3>Advise</h3><p>Use Demi to answer syllabus-specific questions and help students understand what needs attention next.</p></div></div>
+      <figure class="case-big-visual wide-artifact"><img src="../assets/projects/mentora/architecture.png" alt="Mentora application architecture and data flow"><figcaption>The architecture mapped how syllabus upload, email scanning, Google identity, Google Calendar, Zapier, and the Mentora backend would connect into one student planning loop.</figcaption></figure>
     </section>
 
     <section class="case-story-block">
@@ -87,6 +91,14 @@
       <h2>I positioned AI as a translation layer, not the entire product</h2>
       <p>The final product concept included AI-powered syllabus analysis, auto-generated class pages, assignment tracking, calendar integration, personalized study plans, a course-specific Demi assistant, a grade calculator, and final grade forecasting. The key product choice was making AI serve the workflow. Instead of asking students to chat with an empty assistant, Mentora gave them structured outputs first, then let Demi explain or clarify the details.</p>
       <div class="case-summary-grid"><div><span>Dashboard</span><h3>What Needs Attention</h3><p>A central view for upcoming assignments, calendar events, to-dos, and grade indicators.</p></div><div><span>Demi</span><h3>Course-Specific AI</h3><p>An assistant grounded in the uploaded syllabus, designed to answer questions about policies, deadlines, grading, and course expectations.</p></div><div><span>Grade Tools</span><h3>Current vs Future</h3><p>Separated current grade calculation from final grade forecasting because students need both status and direction.</p></div></div>
+      <div class="case-phone-strip">
+        <figure><img src="../assets/projects/mentora/syllabus-upload.png" alt="Mentora syllabus upload screen"><figcaption>Syllabus upload creates the entry point for transforming static PDFs into structured planning data.</figcaption></figure>
+        <figure><img src="../assets/projects/mentora/demi-chat.png" alt="Mentora Demi AI chat screen"><figcaption>Demi answers course-specific questions so students can ask what changed, what is due, and what matters next.</figcaption></figure>
+        <figure><img src="../assets/projects/mentora/calendar.png" alt="Mentora calendar screen"><figcaption>The calendar view turns extracted dates into a weekly planning surface students can actually check.</figcaption></figure>
+        <figure><img src="../assets/projects/mentora/forecast-todo.png" alt="Mentora grade forecast and to-do screen"><figcaption>Forecasting and to-dos connect academic status with immediate next actions.</figcaption></figure>
+        <figure><img src="../assets/projects/mentora/grade-calculator.png" alt="Mentora grade calculator screen"><figcaption>The grade calculator separates current standing from future performance goals.</figcaption></figure>
+        <figure><img src="../assets/projects/mentora/profile.png" alt="Mentora profile screen"><figcaption>Profile and settings keep account management, reminders, and display preferences close to the workflow.</figcaption></figure>
+      </div>
     </section>
 
     <section class="case-story-block">
@@ -146,6 +158,6 @@
     <a href="../index.html#contact-section">Contact</a>
   </footer>
 
-  <script src="../script.js?v=20260801-uh-energy-case"></script>
+  <script src="../script.js?v=20260801-mentora-images"></script>
 </body>
 </html>

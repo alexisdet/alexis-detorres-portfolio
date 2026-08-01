@@ -2404,3 +2404,131 @@ main.case-study > section.case-cover.compact-case-cover .case-cover-art > img {
     aspect-ratio: 4 / 3 !important;
   }
 }
+
+/* Final visual polish pass: project images use white glow, accurate crops, and a subtle light-mode opening wash. */
+body.projects-page:not(.dark-mode) {
+  background:
+    linear-gradient(180deg, rgba(216, 204, 255, .24) 0, rgba(216, 204, 255, .12) 72px, #ffffff 230px) !important;
+}
+
+body.projects-page:not(.dark-mode) main,
+body.projects-page:not(.dark-mode) section {
+  background: transparent !important;
+}
+
+.projects-page .project-thumb,
+main.case-study > section.case-cover.compact-case-cover,
+.case-big-visual img,
+.case-image-grid img,
+.case-phone-strip img {
+  border-color: rgba(255, 255, 255, .82) !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .8),
+    0 0 30px rgba(255, 255, 255, .52),
+    0 18px 44px rgba(30, 34, 72, .16) !important;
+}
+
+.dark-mode .projects-page .project-thumb,
+.dark-mode main.case-study > section.case-cover.compact-case-cover,
+.dark-mode .case-big-visual img,
+.dark-mode .case-image-grid img,
+.dark-mode .case-phone-strip img {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .74),
+    0 0 32px rgba(255, 255, 255, .2),
+    0 24px 58px rgba(0, 0, 0, .32) !important;
+}
+
+.projects-page .divide-thumb img,
+main.case-study > section.case-cover.divide-cover.compact-case-cover .case-cover-art > img {
+  object-fit: cover !important;
+  object-position: center 58% !important;
+  background: #fffdfa !important;
+}
+
+.projects-page .mentora-thumb img,
+main.case-study > section.case-cover.mentora-cover.compact-case-cover .case-cover-art > img {
+  object-fit: cover !important;
+  object-position: center center !important;
+  background: linear-gradient(180deg, #39c9d6 0%, #334166 100%) !important;
+}
+
+.projects-page .energy-thumb img,
+main.case-study > section.case-cover.energy-cover .case-cover-art > img {
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #ffffff !important;
+  padding: clamp(.25rem, .8vw, .6rem) !important;
+}
+
+.case-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.4rem);
+  margin: 1.25rem 0 0;
+}
+
+.case-image-grid figure,
+.case-phone-strip figure {
+  margin: 0;
+}
+
+.case-image-grid img,
+.case-phone-strip img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+  background: #ffffff;
+  object-fit: contain;
+}
+
+.case-image-grid img {
+  aspect-ratio: 1.34 / 1;
+}
+
+.case-phone-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  gap: clamp(.9rem, 1.6vw, 1.25rem);
+  align-items: start;
+  margin: 1.35rem 0 0;
+}
+
+.case-phone-strip img {
+  height: min(520px, 62vw);
+  max-height: 520px;
+  padding: .35rem;
+}
+
+.case-image-grid figcaption,
+.case-phone-strip figcaption {
+  color: var(--text-muted) !important;
+  font-size: .84rem;
+  line-height: 1.55;
+  margin-top: .65rem;
+}
+
+@media (max-width: 880px) {
+  .case-phone-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .case-image-grid,
+  .case-phone-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .case-phone-strip img {
+    height: auto;
+    max-height: none;
+  }
+}
+
+body.dark-mode.projects-page .project-thumb {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .74),
+    0 0 32px rgba(255, 255, 255, .2),
+    0 24px 58px rgba(0, 0, 0, .32) !important;
+}
