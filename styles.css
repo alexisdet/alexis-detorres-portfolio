@@ -2532,3 +2532,168 @@ body.dark-mode.projects-page .project-thumb {
     0 0 32px rgba(255, 255, 255, .2),
     0 24px 58px rgba(0, 0, 0, .32) !important;
 }
+
+/* Case study story pass: Brandon-inspired editorial rhythm with clearer artifact sizing. */
+.case-study.brandon-case {
+  --case-max: 780px;
+}
+
+.case-study.brandon-case .case-intro-block,
+.case-study.brandon-case .case-story-block,
+.case-study.brandon-case .case-research-block,
+.case-study.brandon-case .case-question-callout,
+.case-study.brandon-case .back-link {
+  max-width: var(--case-max) !important;
+}
+
+.case-study.brandon-case .case-editorial-head h1 {
+  letter-spacing: -.04em;
+}
+
+.case-study.brandon-case .narrative-lede h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.02;
+  letter-spacing: -.055em;
+}
+
+.case-study.brandon-case .case-story-block,
+.case-study.brandon-case .case-research-block {
+  padding-top: clamp(2.7rem, 6vw, 4.8rem);
+  border-top: 1px solid color-mix(in srgb, var(--text-main) 16%, transparent);
+}
+
+.case-study.brandon-case .case-summary-grid {
+  margin-top: 1.4rem;
+}
+
+.case-study.brandon-case .case-big-visual {
+  margin: clamp(1.25rem, 2.5vw, 1.8rem) 0 clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.case-study.brandon-case .case-big-visual img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain !important;
+  object-position: center !important;
+  padding: clamp(.45rem, 1vw, .8rem);
+  background: color-mix(in srgb, var(--bg-main) 90%, white 10%);
+}
+
+.case-study.brandon-case .readable-artifact img,
+.case-study.brandon-case .wide-artifact img {
+  aspect-ratio: auto !important;
+}
+
+.case-evidence-pair {
+  display: grid;
+  grid-template-columns: minmax(210px, .78fr) minmax(0, 1fr);
+  gap: clamp(1.1rem, 3vw, 2rem);
+  align-items: center;
+  margin: clamp(1.4rem, 3vw, 2.3rem) 0;
+}
+
+.case-evidence-pair.reverse {
+  grid-template-columns: minmax(0, 1fr) minmax(210px, .78fr);
+}
+
+.case-evidence-pair.reverse figure {
+  order: 2;
+}
+
+.case-evidence-pair figure {
+  margin: 0;
+}
+
+.case-evidence-pair img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  border-radius: 22px;
+  background: color-mix(in srgb, var(--bg-main) 84%, white 16%);
+  padding: .45rem;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .82),
+    0 0 30px rgba(255, 255, 255, .48),
+    0 18px 44px rgba(30, 34, 72, .16);
+}
+
+.case-evidence-pair h3 {
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  margin-bottom: .55rem;
+}
+
+.case-evidence-pair p {
+  font-size: 1rem;
+  line-height: 1.78;
+}
+
+.case-evidence-pair figcaption,
+.compact-supporting-artifacts figcaption {
+  color: var(--text-muted) !important;
+  font-size: .84rem;
+  line-height: 1.55;
+  margin-top: .65rem;
+}
+
+.compact-supporting-artifacts img {
+  max-height: 460px;
+  object-fit: contain !important;
+}
+
+/* Zoom out homepage/case hero art so screenshots stay legible inside their rounded frames. */
+.projects-page .divide-thumb img,
+.projects-page .mentora-thumb img,
+.projects-page .authform-thumb img,
+.projects-page .energy-thumb img,
+main.case-study > section.case-cover.compact-case-cover .case-cover-art > img,
+main.case-study > section.case-cover.energy-cover .case-cover-art > img,
+main.case-study > section.case-cover.authform-cover .case-cover-art > img {
+  object-fit: contain !important;
+  object-position: center center !important;
+  padding: clamp(.4rem, 1vw, .85rem) !important;
+  background: color-mix(in srgb, var(--bg-main) 88%, white 12%) !important;
+}
+
+.projects-page .divide-thumb img,
+main.case-study > section.case-cover.divide-cover.compact-case-cover .case-cover-art > img {
+  padding: clamp(.35rem, .9vw, .7rem) !important;
+}
+
+.projects-page .mentora-thumb img,
+main.case-study > section.case-cover.mentora-cover.compact-case-cover .case-cover-art > img {
+  padding: clamp(.6rem, 1.5vw, 1.05rem) !important;
+}
+
+main.case-study > section.case-cover.compact-case-cover {
+  width: min(620px, calc(100vw - 48px)) !important;
+  max-width: 620px !important;
+  aspect-ratio: 16 / 10 !important;
+}
+
+main.case-study > section.case-cover.energy-cover,
+main.case-study > section.case-cover.authform-cover {
+  width: min(760px, calc(100vw - 40px)) !important;
+  max-width: 760px !important;
+  aspect-ratio: 16 / 9 !important;
+}
+
+@media (max-width: 760px) {
+  .case-evidence-pair,
+  .case-evidence-pair.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .case-evidence-pair.reverse figure {
+    order: 0;
+  }
+
+  .case-evidence-pair img {
+    max-height: none;
+  }
+
+  main.case-study > section.case-cover.compact-case-cover {
+    width: min(92vw, 520px) !important;
+    aspect-ratio: 4 / 3 !important;
+  }
+}
