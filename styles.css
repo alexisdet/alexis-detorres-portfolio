@@ -3328,3 +3328,102 @@ main.case-study > section.case-cover.authform-cover .case-cover-art > img {
     padding-block: 24px !important;
   }
 }
+
+
+/* MedAuth patient-side evidence gallery */
+.medauth-patient-interface {
+  position: relative;
+}
+
+.patient-screen-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: clamp(1.2rem, 3vw, 2.6rem);
+  align-items: center;
+  margin-top: 1.6rem;
+}
+
+.patient-screen-feature figure,
+.patient-screen-grid figure {
+  margin: 0;
+  border-radius: 26px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 22px 60px rgba(255, 255, 255, 0.16), 0 18px 45px rgba(10, 16, 35, 0.18);
+}
+
+.patient-screen-feature img,
+.patient-screen-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #f7f9fc;
+}
+
+.patient-screen-feature figcaption,
+.patient-screen-grid figcaption {
+  display: block;
+  padding: 0.85rem 1rem 1rem;
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.patient-screen-feature h3 {
+  margin: 0 0 0.75rem;
+  color: var(--text-heading);
+  font-size: clamp(1.3rem, 2vw, 1.9rem);
+}
+
+.patient-screen-feature p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.patient-screen-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  margin-top: 1.5rem;
+}
+
+.patient-screen-grid figure {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.patient-screen-grid img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.patient-screen-grid figcaption strong,
+.patient-screen-grid figcaption span {
+  display: block;
+}
+
+.patient-screen-grid figcaption strong {
+  color: var(--text-heading);
+  margin-bottom: 0.25rem;
+}
+
+.dark-mode .patient-screen-feature figure,
+.dark-mode .patient-screen-grid figure {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 18px 48px rgba(255, 255, 255, 0.14), 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+@media (max-width: 780px) {
+  .patient-screen-feature,
+  .patient-screen-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-screen-grid img {
+    aspect-ratio: auto;
+    max-height: 360px;
+    object-fit: contain;
+  }
+}
