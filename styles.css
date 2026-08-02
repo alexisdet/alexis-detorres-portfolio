@@ -3031,3 +3031,23 @@ main.case-study > section.case-cover.energy-cover .case-cover-art > img {
     object-position: center center !important;
   }
 }
+
+/* Final alignment fix for AdaptAI and Mentora cover cards. */
+.projects-page .divide-thumb,
+.projects-page .mentora-thumb {
+  background: #ffffff !important;
+}
+
+.projects-page .divide-thumb img,
+.projects-page .mentora-thumb img {
+  object-fit: contain !important;
+  object-position: center center !important;
+  padding: 0 !important;
+}
+
+main.case-study > section.case-cover.divide-cover.compact-case-cover .case-cover-art > img,
+main.case-study > section.case-cover.mentora-cover.compact-case-cover .case-cover-art > img {
+  object-fit: contain !important;
+  object-position: center center !important;
+  padding: 0 !important;
+}
