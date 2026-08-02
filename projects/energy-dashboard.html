@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Anton&family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=20260802-medauth-patient-flow" />
+  <link rel="stylesheet" href="../styles.css?v=20260802-medauth-physician-flow" />
 </head>
 <body class="dark-mode">
   <header class="site-header">
@@ -25,7 +25,7 @@
   <main class="case-study brandon-case medauth-case authform-case">
     <section class="case-cover authform-cover compact-case-cover">
       <div class="case-cover-art">
-        <img src="../assets/projects/medauth/medauth-home-cover.png?v=20260802-medauth-patient-flow" alt="MedAuth Clinical prototype award cover" loading="eager" />
+        <img src="../assets/projects/medauth/medauth-home-cover.png?v=20260802-medauth-physician-flow" alt="MedAuth Clinical prototype award cover" loading="eager" />
       </div>
     </section>
 
@@ -77,6 +77,24 @@
       <p>The image below is inspiration, not the final MedAuth prototype. I used healthcare dashboard patterns to think through how the Base44 build should organize navigation, patient context, status indicators, review actions, and next-step hierarchy before translating those ideas into the working product.</p>
       <figure class="case-big-visual readable-artifact"><img src="../assets/projects/medauth/physician-dashboard.png" alt="Healthcare dashboard reference used for MedAuth Clinical inspiration"><figcaption>Reference image used for dashboard inspiration: it helped define the clinical command-center feel, not the final MedAuth screen.</figcaption></figure>
       <div class="case-summary-grid"><div><span>Input</span><h3>Auto Extraction</h3><p>Patient summaries are parsed into diagnosis, medication, symptoms, prior treatments, side effects, ICD-10 codes, and insurer requirements.</p></div><div><span>Review</span><h3>Human Editing</h3><p>Physicians can manually correct invalid information before any AI output becomes final.</p></div><div><span>Output</span><h3>Payer-Ready Packet</h3><p>The system produces an authorization letter, structured summary card, and denial-risk recommendations.</p></div></div>
+    </section>
+
+    <section class="case-story-block medauth-physician-interface">
+      <p class="case-story-label">PHYSICIAN-SIDE INTERFACE</p>
+      <h2>The physician side became a command center for authorization work</h2>
+      <p>After studying clinical dashboard hierarchy, I translated the idea into a MedAuth workflow that helps staff see open cases, identify denial risk, strengthen weak packets, and resubmit appeals without hunting across insurer portals.</p>
+      <div class="patient-screen-feature">
+        <figure><img src="../assets/projects/medauth/physician-dashboard-final.png" alt="MedAuth physician dashboard overview"><figcaption>Dashboard: summarizes submitted PAs, approval rate, pending reviews, denials, and the most recent authorization cases.</figcaption></figure>
+        <div>
+          <h3>Design decision: lead with operational health, then let physicians drill into the risky case</h3>
+          <p>The overview gives clinical staff a queue they can actually act on. Instead of treating every authorization the same, the interface points attention toward pending reviews, appealable denials, and cases with high documentation risk.</p>
+        </div>
+      </div>
+      <div class="patient-screen-grid physician-screen-grid">
+        <figure><img src="../assets/projects/medauth/physician-risk-review.png" alt="MedAuth approval probability breakdown"><figcaption><strong>Risk review</strong><span>Breaks denial probability into documentation completeness, step-therapy compliance, ICD-10 accuracy, safety screening, and cost-risk so the AI recommendation stays explainable.</span></figcaption></figure>
+        <figure><img src="../assets/projects/medauth/physician-pa-form.png" alt="MedAuth prior authorization form with missing documentation warning"><figcaption><strong>PA form</strong><span>Auto-filled fields reduce repetitive entry while the missing-documentation banner makes the next corrective action obvious before submission.</span></figcaption></figure>
+        <figure><img src="../assets/projects/medauth/physician-appeal-letter.png" alt="MedAuth appeal letter generation screen"><figcaption><strong>Appeal workflow</strong><span>When a denial happens, the system turns missing evidence into an editable appeal letter and a clearer resubmission path.</span></figcaption></figure>
+      </div>
     </section>
 
     <section class="case-story-block">
@@ -163,6 +181,6 @@
     <a href="../index.html#contact-section">Contact</a>
   </footer>
 
-  <script src="../script.js?v=20260802-medauth-patient-flow"></script>
+  <script src="../script.js?v=20260802-medauth-physician-flow"></script>
 </body>
 </html>

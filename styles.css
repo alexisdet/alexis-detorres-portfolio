@@ -3427,3 +3427,22 @@ main.case-study > section.case-cover.authform-cover .case-cover-art > img {
     object-fit: contain;
   }
 }
+
+/* MedAuth physician-side screens are dense dashboard views, so keep them readable. */
+.physician-screen-grid {
+  grid-template-columns: 1fr;
+}
+
+.physician-screen-grid img {
+  aspect-ratio: 16 / 7.2;
+  object-fit: contain;
+  object-position: top center;
+  background: #f7f9fc;
+}
+
+@media (max-width: 780px) {
+  .physician-screen-grid img {
+    aspect-ratio: auto;
+    max-height: none;
+  }
+}
