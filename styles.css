@@ -3051,3 +3051,27 @@ main.case-study > section.case-cover.mentora-cover.compact-case-cover .case-cove
   object-position: center center !important;
   padding: 0 !important;
 }
+
+/* Use full-bleed source covers for AdaptAI and Mentora now that both assets are native 16:9. */
+.projects-page .divide-thumb,
+.projects-page .mentora-thumb {
+  padding: 0 !important;
+  background: #ffffff !important;
+}
+
+.projects-page .divide-thumb img,
+.projects-page .mentora-thumb img,
+main.case-study > section.case-cover.divide-cover.compact-case-cover .case-cover-art > img,
+main.case-study > section.case-cover.mentora-cover.compact-case-cover .case-cover-art > img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  padding: 0 !important;
+  transform: none !important;
+}
+
+/* Match homepage project cards to the native 16:9 cover artwork. */
+.projects-page .project-thumb {
+  aspect-ratio: 16 / 9 !important;
+}
