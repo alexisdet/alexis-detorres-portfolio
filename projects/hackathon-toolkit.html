@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Anton&family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=20260801-case-story-pass" />
+  <link rel="stylesheet" href="../styles.css?v=20260801-editorial-evidence-pass" />
 </head>
 <body class="dark-mode">
   <header class="site-header">
@@ -54,24 +54,21 @@
     </section>
 
     <section class="case-research-block">
-      <p class="artifact-label">Research Evidence</p>
-      <h2>Interview patterns pointed to two student modes: overwhelmed planner and deadline reactor</h2>
+      <p class="artifact-label">SPEAKING TO USERS</p><h2>I narrowed the roadmap by looking at where planning actually breaks</h2>
       <p>The personas below are intentionally large because they are the evidence behind the roadmap. They showed that students needed the same product promise from different angles: reduce manual setup, clarify priorities, and show the next best action.</p>
       <figure class="case-big-visual readable-artifact"><img src="../assets/projects/mentora/persona-aidan.png" alt="Mentora persona Aidan"><figcaption>Aidan showed the need for a system that can consolidate Canvas, Outlook, Google Calendar, Notion, syllabi, and ChatGPT into one reliable academic plan.</figcaption></figure>
       <figure class="case-big-visual readable-artifact"><img src="../assets/projects/mentora/persona-max.png" alt="Mentora persona Max"><figcaption>Max showed the leadership/workload side of the problem: even high-performing students need help deciding what deserves attention first.</figcaption></figure>
     </section>
 
     <section class="case-story-block">
-      <p class="case-story-label">Product Strategy</p>
-      <h2>I cut the MVP down to one loop: upload, extract, plan, ask</h2>
+      <p class="case-story-label">OPPORTUNITIES</p><h2>I guided the team to four feature areas for the MVP</h2>
       <p>With 48 hours, the temptation was to build everything: tutoring, study groups, flashcards, LMS integrations, grade analytics, and a general AI assistant. I pushed the team toward the smallest complete loop that would still feel meaningful. A student uploads a syllabus. Mentora extracts course structure. The system creates calendar and task views. Demi answers questions using course context.</p>
       <figure class="case-big-visual wide-artifact"><img src="../assets/projects/mentora/architecture.png" alt="Mentora application architecture"><figcaption>This architecture diagram maps the product loop: login, syllabus upload, extraction, calendar events, AI responses, and backend messaging.</figcaption></figure>
       <div class="case-summary-grid"><div><span>Keep</span><h3>Syllabus Upload</h3><p>The highest-leverage input because it contains deadlines, weights, schedules, and policies.</p></div><div><span>Keep</span><h3>Calendar + To-Do</h3><p>The strongest output because students need visible next steps, not another static document.</p></div><div><span>Defer</span><h3>Broad Tutoring</h3><p>General tutoring sounded exciting but did not solve the first trust problem: knowing what the class requires.</p></div></div>
     </section>
 
     <section class="case-story-block">
-      <p class="case-story-label">MVP Flow</p>
-      <h2>Each screen answered a specific planning question</h2>
+      <p class="case-story-label">DEFINING CORE FEATURES</p><h2>Each screen answered a specific planning question</h2>
       <p>Instead of placing all prototype images together, I broke the flow into decision moments. The product needed to help students first import information, then ask questions, then see time, then understand performance.</p>
       <div class="case-evidence-pair">
         <figure><img src="../assets/projects/mentora/syllabus-upload.png" alt="Mentora syllabus upload screen"><figcaption>Import: Students start with the document they already receive instead of rebuilding their semester manually.</figcaption></figure>
@@ -79,7 +76,7 @@
       </div>
       <div class="case-evidence-pair reverse">
         <figure><img src="../assets/projects/mentora/demi-chat.png" alt="Mentora Demi AI assistant screen"><figcaption>Clarify: Demi turns static syllabus content into course-specific answers.</figcaption></figure>
-        <div><h3>2. Let students ask the messy questions</h3><p>Demi gives students a way to ask, â€œWhat changed?â€ â€œWhat is due?â€ or â€œWhat should I focus on?â€ without searching through multiple class sources. The AI layer supports interpretation after the system has structured the source material.</p></div>
+        <div><h3>2. Let students ask the messy questions</h3><p>Demi gives students a way to ask, "What changed?" "What is due?" or "What should I focus on?" without searching through multiple class sources. The AI layer supports interpretation after the system has structured the source material.</p></div>
       </div>
       <div class="case-evidence-pair">
         <figure><img src="../assets/projects/mentora/calendar.png" alt="Mentora calendar screen"><figcaption>Plan: Extracted deadlines become a visible calendar instead of hidden syllabus text.</figcaption></figure>
@@ -87,24 +84,22 @@
       </div>
       <div class="case-evidence-pair reverse">
         <figure><img src="../assets/projects/mentora/forecast-todo.png" alt="Mentora forecast and to-do screen"><figcaption>Prioritize: To-dos and grade forecasts connect academic status to next actions.</figcaption></figure>
-        <div><h3>4. Connect grades to action</h3><p>The forecast and to-do screens help students understand both what is coming and what it means. This was the product shift from â€œtracking tasksâ€ to â€œhelping students make better academic decisions.â€</p></div>
+        <div><h3>4. Connect grades to action</h3><p>The forecast and to-do screens help students understand both what is coming and what it means. This was the product shift from "tracking tasks" to "helping students make better academic decisions."</p></div>
       </div>
       <div class="case-image-grid compact-supporting-artifacts">
-        <figure><img src="../assets/projects/mentora/grade-calculator.png" alt="Mentora grade calculator screen"><figcaption>Grade calculator: answers â€œwhere am I now?â€</figcaption></figure>
+        <figure><img src="../assets/projects/mentora/grade-calculator.png" alt="Mentora grade calculator screen"><figcaption>Grade calculator: answers "where am I now?"</figcaption></figure>
         <figure><img src="../assets/projects/mentora/profile.png" alt="Mentora profile screen"><figcaption>Profile/settings: keeps notifications and display preferences close to the workflow.</figcaption></figure>
       </div>
     </section>
 
     <section class="case-story-block">
-      <p class="case-story-label">Product Decision</p>
-      <h2>I separated calculation from forecasting because they solve different anxieties</h2>
-      <p>One important roadmap decision was to separate current grade calculation from final grade forecasting. A calculator answers, â€œWhere am I right now?â€ A forecast answers, â€œWhat do I need next?â€ Combining those into one feature would have looked simpler, but it would have blurred two different student decisions.</p>
+      <p class="case-story-label">VISUAL LANGUAGE</p><h2>I separated calculation from forecasting because each screen needed one calm job</h2>
+      <p>One important roadmap decision was to separate current grade calculation from final grade forecasting. A calculator answers, "Where am I right now?" A forecast answers, "What do I need next?" Combining those into one feature would have looked simpler, but it would have blurred two different student decisions.</p>
       <div class="case-summary-grid"><div><span>Status</span><h3>Current Grade</h3><p>Helps students understand performance based on completed work and grading weights.</p></div><div><span>Direction</span><h3>Final Forecast</h3><p>Shows what future scores or assignments could change the final outcome.</p></div><div><span>Tradeoff</span><h3>Clarity Over Compression</h3><p>Kept tools separate so each screen had one job and one mental model.</p></div></div>
     </section>
 
     <section class="case-story-block">
-      <p class="case-story-label">Impact</p>
-      <h2>The MVP proved students wanted academic clarity more than AI novelty</h2>
+      <p class="case-story-label">LEARNINGS &amp; IMPACT</p><h2>The MVP proved students wanted academic clarity more than AI novelty</h2>
       <div class="case-summary-grid"><div><h3>2nd Place</h3><p>Recognized in the academic planning platform competition.</p></div><div><h3>48 Hours</h3><p>Shipped a focused MVP under hackathon constraints without losing the core workflow.</p></div><div><h3>10+ Interviews</h3><p>Roadmap decisions were based on repeated student pain points, not feature guessing.</p></div><div><h3>40+ Users</h3><p>Early adoption validated syllabus analysis, assignment tracking, and planning support.</p></div></div>
     </section>
 
@@ -117,7 +112,7 @@
     <section class="case-story-block">
       <p class="case-story-label">Reflection</p>
       <h2>Mentora taught me to scope AI around a workflow, not a wow factor</h2>
-      <p>The strongest product decision was narrowing the product around a studentâ€™s real operating pain: turning academic information into action. The result was a clearer story from beginning to end: students start overwhelmed by documents, move through structured extraction and planning, and end with a system that helps them feel more in control of the semester.</p>
+      <p>The strongest product decision was narrowing the product around a student's real operating pain: turning academic information into action. The result was a clearer story from beginning to end: students start overwhelmed by documents, move through structured extraction and planning, and end with a system that helps them feel more in control of the semester.</p>
     </section>
 
     <a class="back-link" href="../index.html">&larr; Back to all projects</a>
@@ -138,6 +133,6 @@
     <a href="../index.html#contact-section">Contact</a>
   </footer>
 
-  <script src="../script.js?v=20260801-case-story-pass"></script>
+  <script src="../script.js?v=20260801-editorial-evidence-pass"></script>
 </body>
 </html>

@@ -2697,3 +2697,181 @@ main.case-study > section.case-cover.authform-cover {
     aspect-ratio: 4 / 3 !important;
   }
 }
+
+/* Editorial evidence pass: final crop, rhythm, and readable artifact controls. */
+.case-study.brandon-case {
+  --case-max: 820px;
+  background: var(--bg-main) !important;
+}
+
+.case-study.brandon-case .case-intro-block,
+.case-study.brandon-case .case-story-block,
+.case-study.brandon-case .case-research-block,
+.case-study.brandon-case .case-question-callout,
+.case-study.brandon-case .back-link {
+  width: min(var(--case-max), calc(100vw - 40px)) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.case-study.brandon-case .case-story-block,
+.case-study.brandon-case .case-research-block {
+  position: relative;
+  padding-top: clamp(3rem, 6vw, 5rem) !important;
+  margin-top: clamp(2.6rem, 5vw, 4rem) !important;
+}
+
+.case-study.brandon-case .case-story-block::before,
+.case-study.brandon-case .case-research-block::before {
+  content: "";
+  position: absolute;
+  top: clamp(3rem, 6vw, 5rem);
+  left: clamp(-3.7rem, -5vw, -2.4rem);
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--accent-line);
+  box-shadow: 0 0 22px color-mix(in srgb, var(--accent-line) 54%, transparent);
+}
+
+.case-study.brandon-case .case-story-label,
+.case-study.brandon-case .artifact-label {
+  font-family: "Sora", sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-muted) !important;
+  font-weight: 700;
+  margin-bottom: .45rem;
+}
+
+.case-study.brandon-case .case-story-block h2,
+.case-study.brandon-case .case-research-block h2 {
+  max-width: 760px;
+  line-height: 1.16;
+  letter-spacing: -.035em;
+}
+
+.case-study.brandon-case .case-big-visual,
+.case-study.brandon-case .case-evidence-pair figure {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.case-study.brandon-case .case-big-visual img,
+.case-study.brandon-case .case-evidence-pair img,
+.case-study.brandon-case .case-image-grid img,
+.case-study.brandon-case .case-phone-strip img {
+  border-radius: 18px !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.86), 0 0 34px rgba(255,255,255,.5), 0 18px 42px rgba(30,34,72,.12) !important;
+}
+
+.case-study.brandon-case .case-big-visual img {
+  max-height: 540px !important;
+  object-fit: contain !important;
+}
+
+.case-study.brandon-case .wide-artifact img,
+.case-study.brandon-case .readable-artifact img {
+  max-height: none !important;
+  padding: .35rem !important;
+}
+
+.mentora-case .readable-artifact,
+.mentora-case .wide-artifact {
+  width: min(980px, calc(100vw - 36px)) !important;
+  max-width: 980px !important;
+  margin-left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+.mentora-case .readable-artifact img,
+.mentora-case .wide-artifact img {
+  width: 100% !important;
+}
+
+.projects-page .project-thumb {
+  aspect-ratio: 1.58 / 1 !important;
+  padding: clamp(.7rem, 1.5vw, 1rem) !important;
+}
+
+.projects-page .project-thumb img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  padding: 0 !important;
+  transform: none !important;
+}
+
+.projects-page .divide-thumb img,
+.projects-page .mentora-thumb img,
+.projects-page .energy-thumb img,
+.projects-page .authform-thumb img {
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+main.case-study > section.case-cover.compact-case-cover,
+main.case-study > section.case-cover.energy-cover,
+main.case-study > section.case-cover.authform-cover {
+  width: min(720px, calc(100vw - 40px)) !important;
+  max-width: 720px !important;
+  aspect-ratio: 16 / 9 !important;
+  min-height: 0 !important;
+  padding: clamp(.8rem, 2vw, 1.2rem) !important;
+  margin-top: clamp(1rem, 2vw, 1.8rem) !important;
+  margin-bottom: clamp(2rem, 4vw, 3.2rem) !important;
+}
+
+main.case-study > section.case-cover .case-cover-art,
+main.case-study > section.case-cover.compact-case-cover .case-cover-art,
+main.case-study > section.case-cover.energy-cover .case-cover-art,
+main.case-study > section.case-cover.authform-cover .case-cover-art {
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 !important;
+}
+
+main.case-study > section.case-cover .case-cover-art > img,
+main.case-study > section.case-cover.compact-case-cover .case-cover-art > img,
+main.case-study > section.case-cover.energy-cover .case-cover-art > img,
+main.case-study > section.case-cover.authform-cover .case-cover-art > img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  padding: 0 !important;
+  transform: none !important;
+  background: #ffffff !important;
+}
+
+main.case-study > section.case-cover.divide-cover.compact-case-cover .case-cover-art > img {
+  object-position: center center !important;
+}
+
+@media (max-width: 760px) {
+  .case-study.brandon-case .case-story-block::before,
+  .case-study.brandon-case .case-research-block::before {
+    left: 0;
+    top: 1.55rem;
+    width: 10px;
+    height: 10px;
+  }
+
+  .case-study.brandon-case .case-story-block,
+  .case-study.brandon-case .case-research-block {
+    padding-top: 2.4rem !important;
+  }
+
+  .projects-page .project-thumb {
+    aspect-ratio: 1.25 / 1 !important;
+  }
+
+  main.case-study > section.case-cover.compact-case-cover,
+  main.case-study > section.case-cover.energy-cover,
+  main.case-study > section.case-cover.authform-cover {
+    width: min(92vw, 560px) !important;
+    aspect-ratio: 4 / 3 !important;
+  }
+}

@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Anton&family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=20260801-case-story-pass" />
+  <link rel="stylesheet" href="../styles.css?v=20260801-editorial-evidence-pass" />
 </head>
 <body class="dark-mode">
   <header class="site-header">
@@ -53,14 +53,29 @@
     </section>
 
     <section class="case-story-block">
-      <p class="case-story-label">Product Decisions</p>
+      <p class="case-story-label">SPEAKING TO USERS</p>
+      <h2>I treated physicians and care teams as high-context users with very little spare attention</h2>
+      <p>The product could not assume users had time to read a long AI explanation. Physicians need quick confidence: what is missing, why it matters, and what action should happen next. Administrative staff need consistency: the request should be organized enough that handoffs do not lose clinical context.</p>
+      <p>That pushed the dashboard toward a preparation workflow rather than a generic document generator. Each information block needed a clear job: confirm the patient context, summarize the medication request, surface the risk, and give the physician a final review path.</p>
+      <div class="case-summary-grid"><div><span>User Need</span><h3>Scan Quickly</h3><p>Use strong labels and short summaries so the review surface can be understood during a busy clinical workflow.</p></div><div><span>User Need</span><h3>Trust the Source</h3><p>Keep important clinical details visible instead of hiding the logic behind an AI-generated paragraph.</p></div><div><span>User Need</span><h3>Fix Before Submit</h3><p>Make documentation gaps visible while there is still time to correct the request.</p></div></div>
+    </section>
+
+    <section class="case-story-block">
+      <p class="case-story-label">DEFINING CORE FEATURES</p>
       <h2>I designed AI as a preparation layer, not an approval machine</h2>
       <p>Healthcare workflows require trust, accountability, and traceability. AuthForm therefore keeps AI in a support role. It can structure a request, flag missing evidence, and draft payer-ready summaries, but the physician remains the final reviewer. That decision protects clinical context and makes the product more realistic for a regulated environment.</p>
       <div class="case-summary-grid"><div><span>01</span><h3>Payer Summary Cards</h3><p>Condense diagnosis, treatment request, medication history, rationale, and required evidence into one reviewable block.</p></div><div><span>02</span><h3>Risk Factors</h3><p>Surface missing documentation, weak rationale, or payer-specific requirements before submission creates delay.</p></div><div><span>03</span><h3>Human Review</h3><p>Require physician approval before anything is finalized so the AI supports judgment instead of replacing it.</p></div></div>
     </section>
 
     <section class="case-story-block">
-      <p class="case-story-label">Impact</p>
+      <p class="case-story-label">PRODUCT TRADEOFFS</p>
+      <h2>The hardest decision was what not to automate</h2>
+      <p>In a healthcare product, automation can create risk when it hides uncertainty. I avoided framing AuthForm as a tool that "gets approvals." Instead, the product promise became more defensible: reduce preventable delays by improving packet readiness. That distinction matters because it gives the product a measurable operational goal without claiming control over payer decisions.</p>
+      <div class="case-summary-grid"><div><span>Keep</span><h3>AI Summaries</h3><p>Useful when they convert scattered clinical details into reviewable structure.</p></div><div><span>Add</span><h3>Confidence States</h3><p>Needed to show whether a recommendation is strong, incomplete, or requires physician review.</p></div><div><span>Avoid</span><h3>Auto-Submission</h3><p>Too risky for an MVP because clinical accountability and payer rules require explicit human review.</p></div></div>
+    </section>
+
+    <section class="case-story-block">
+      <p class="case-story-label">LEARNINGS &amp; IMPACT</p>
       <h2>The outcome was a clearer request workflow with less avoidable back-and-forth</h2>
       <p>AuthForm was built to reduce preventable prior authorization delays by improving request quality before submission. The product makes clinical evidence easier to scan, payer requirements easier to catch, and approval packets easier to prepare.</p>
       <div class="case-summary-grid"><div><h3>3rd Place</h3><p>Recognized in the BASE44 Competition for healthcare workflow design.</p></div><div><h3>Clearer Packets</h3><p>Organized ICD-10 codes, treatment requests, and clinical rationale into insurer-ready summaries.</p></div><div><h3>Lower Risk</h3><p>Helped physicians identify documentation gaps before they became preventable denials or delays.</p></div></div>
@@ -96,6 +111,6 @@
     <a href="../index.html#contact-section">Contact</a>
   </footer>
 
-  <script src="../script.js?v=20260801-case-story-pass"></script>
+  <script src="../script.js?v=20260801-editorial-evidence-pass"></script>
 </body>
 </html>
