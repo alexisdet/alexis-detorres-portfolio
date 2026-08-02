@@ -2928,3 +2928,32 @@ main.case-study > section.case-cover.divide-cover.compact-case-cover .case-cover
     justify-content: center;
   }
 }
+
+/* Mentora cover image crop pass. */
+.projects-page .mentora-thumb,
+main.case-study > section.case-cover.mentora-cover.compact-case-cover {
+  background: linear-gradient(135deg, #ffffff 0%, #f6fbff 100%) !important;
+}
+
+.projects-page .mentora-thumb img,
+main.case-study > section.case-cover.mentora-cover.compact-case-cover .case-cover-art > img {
+  object-fit: cover !important;
+  object-position: center 46% !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.92), 0 0 34px rgba(255,255,255,.72), 0 18px 42px rgba(30,34,72,.14) !important;
+}
+
+.projects-page .mentora-thumb img {
+  transform: scale(1.03) !important;
+}
+
+main.case-study > section.case-cover.mentora-cover.compact-case-cover .case-cover-art > img {
+  transform: scale(1.02) !important;
+}
+
+@media (max-width: 760px) {
+  .projects-page .mentora-thumb img,
+  main.case-study > section.case-cover.mentora-cover.compact-case-cover .case-cover-art > img {
+    object-position: center 44% !important;
+  }
+}
