@@ -3075,3 +3075,256 @@ main.case-study > section.case-cover.mentora-cover.compact-case-cover .case-cove
 .projects-page .project-thumb {
   aspect-ratio: 16 / 9 !important;
 }
+
+/* 2026-08-02 final case-library and case-study polish.
+   This sits last on purpose: older experimental cover rules above were fighting each other. */
+.projects-page .editorial-grid {
+  align-items: start !important;
+}
+
+.projects-page .case-card {
+  display: grid !important;
+  gap: 14px !important;
+}
+
+.projects-page .project-thumb {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  border-radius: 26px !important;
+  overflow: hidden !important;
+  background: #fff !important;
+  border: 1px solid color-mix(in srgb, var(--accent-line) 16%, transparent) !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .9),
+    0 0 28px rgba(255, 255, 255, .52),
+    0 18px 42px rgba(30, 34, 72, .14) !important;
+}
+
+.projects-page .project-thumb img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  transform: none !important;
+  filter: saturate(1.05) contrast(1.03) !important;
+}
+
+.projects-page .divide-thumb img,
+.projects-page .mentora-thumb img,
+.projects-page .authform-thumb img,
+.projects-page .energy-thumb img {
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+.projects-page .project-chip-row {
+  margin-top: 4px !important;
+}
+
+.projects-page .case-card h3 {
+  margin-top: 0 !important;
+}
+
+.case-study.brandon-case {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--accent-line) 8%, transparent) 0, transparent 180px),
+    var(--bg-main) !important;
+}
+
+main.case-study > section.case-cover,
+main.case-study > section.case-cover.compact-case-cover,
+main.case-study > section.case-cover.energy-cover,
+main.case-study > section.case-cover.authform-cover {
+  max-width: min(1180px, calc(100% - 40px)) !important;
+  min-height: auto !important;
+  height: auto !important;
+  margin: 30px auto 42px !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+main.case-study > section.case-cover .case-cover-art,
+main.case-study > section.case-cover.compact-case-cover .case-cover-art,
+main.case-study > section.case-cover.energy-cover .case-cover-art,
+main.case-study > section.case-cover.authform-cover .case-cover-art {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  border-radius: 30px !important;
+  overflow: hidden !important;
+  background: #fff !important;
+  border: 1px solid rgba(255, 255, 255, .72) !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .9),
+    0 0 34px rgba(255, 255, 255, .72),
+    0 24px 64px rgba(30, 34, 72, .18) !important;
+}
+
+main.case-study > section.case-cover .case-cover-art > img,
+main.case-study > section.case-cover.compact-case-cover .case-cover-art > img,
+main.case-study > section.case-cover.energy-cover .case-cover-art > img,
+main.case-study > section.case-cover.authform-cover .case-cover-art > img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  transform: none !important;
+  filter: saturate(1.04) contrast(1.02) !important;
+}
+
+.case-intro-block,
+.case-story-block,
+.case-research-block,
+.case-question-callout {
+  max-width: 960px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.case-intro-block {
+  padding-top: 10px !important;
+}
+
+.case-intro-block h1 {
+  letter-spacing: -.04em !important;
+}
+
+.case-story-block,
+.case-research-block {
+  padding-block: 34px !important;
+}
+
+.case-story-block h2,
+.case-research-block h2 {
+  max-width: 820px !important;
+  line-height: 1.13 !important;
+}
+
+.case-story-block > p:not(.case-story-label),
+.case-research-block > p:not(.artifact-label) {
+  max-width: 820px !important;
+  font-size: clamp(1rem, .95rem + .22vw, 1.14rem) !important;
+  line-height: 1.72 !important;
+}
+
+.case-summary-grid {
+  margin-top: 24px !important;
+}
+
+.case-big-visual,
+.case-image-grid figure,
+.case-evidence-pair figure {
+  border-radius: 22px !important;
+  overflow: hidden !important;
+  background: color-mix(in srgb, var(--bg-main) 94%, #ffffff 6%) !important;
+  border: 1px solid color-mix(in srgb, var(--accent-line) 12%, transparent) !important;
+  box-shadow: 0 16px 42px rgba(30, 34, 72, .10) !important;
+}
+
+.case-big-visual {
+  margin: 28px 0 10px !important;
+}
+
+.case-big-visual img,
+.case-image-grid img,
+.case-evidence-pair img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+.case-big-visual figcaption,
+.case-image-grid figcaption,
+.case-evidence-pair figcaption {
+  padding: 12px 16px 16px !important;
+  color: var(--text-muted) !important;
+  font-size: .9rem !important;
+  line-height: 1.45 !important;
+}
+
+.case-evidence-pair {
+  display: grid !important;
+  grid-template-columns: minmax(260px, .9fr) minmax(260px, 1fr) !important;
+  gap: 28px !important;
+  align-items: center !important;
+  margin: 34px 0 !important;
+}
+
+.case-evidence-pair.reverse figure {
+  order: 2;
+}
+
+.case-evidence-pair.reverse > div {
+  order: 1;
+}
+
+.case-evidence-pair > div h3 {
+  margin-top: 0 !important;
+}
+
+.case-image-grid.compact-supporting-artifacts {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  margin-top: 28px !important;
+}
+
+.readable-artifact img {
+  image-rendering: auto !important;
+}
+
+@media (max-width: 860px) {
+  .case-evidence-pair,
+  .case-evidence-pair.reverse {
+    grid-template-columns: 1fr !important;
+  }
+
+  .case-evidence-pair.reverse figure,
+  .case-evidence-pair.reverse > div {
+    order: initial;
+  }
+
+  .case-image-grid.compact-supporting-artifacts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 640px) {
+  main.case-study > section.case-cover,
+  main.case-study > section.case-cover.compact-case-cover,
+  main.case-study > section.case-cover.energy-cover,
+  main.case-study > section.case-cover.authform-cover {
+    max-width: calc(100% - 24px) !important;
+    margin-top: 18px !important;
+    margin-bottom: 28px !important;
+  }
+
+  main.case-study > section.case-cover .case-cover-art,
+  main.case-study > section.case-cover.compact-case-cover .case-cover-art,
+  main.case-study > section.case-cover.energy-cover .case-cover-art,
+  main.case-study > section.case-cover.authform-cover .case-cover-art {
+    border-radius: 22px !important;
+  }
+
+  .case-story-block,
+  .case-research-block {
+    padding-block: 24px !important;
+  }
+}
