@@ -2875,3 +2875,56 @@ main.case-study > section.case-cover.divide-cover.compact-case-cover .case-cover
     aspect-ratio: 4 / 3 !important;
   }
 }
+
+/* MedAuth Clinical case study polish. */
+.case-actions {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: .85rem;
+  flex-wrap: wrap;
+}
+
+.case-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: .78rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent-line) 42%, transparent);
+  background: color-mix(in srgb, var(--accent-line) 12%, transparent);
+  color: var(--text-heading) !important;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 14px 30px color-mix(in srgb, var(--accent-line) 14%, transparent);
+  transition: transform .22s ease, border-color .22s ease, background .22s ease;
+}
+
+.case-actions a:hover,
+.case-actions a:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--accent-line);
+  background: color-mix(in srgb, var(--accent-line) 18%, transparent);
+}
+
+.medauth-case .case-cover-art img,
+.projects-page .authform-thumb img {
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #ffffff !important;
+}
+
+.medauth-case .case-question-callout {
+  background: color-mix(in srgb, var(--accent-line) 14%, var(--bg-main)) !important;
+  border: 1px solid color-mix(in srgb, var(--accent-line) 20%, transparent) !important;
+}
+
+.medauth-case .case-question-callout p {
+  color: var(--text-heading) !important;
+}
+
+@media (max-width: 760px) {
+  .case-actions {
+    justify-content: center;
+  }
+}

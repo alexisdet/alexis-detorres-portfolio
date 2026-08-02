@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AuthForm | Case Study</title>
+  <title>MedAuth Clinical | Case Study</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Anton&family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=20260801-editorial-evidence-pass" />
+  <link rel="stylesheet" href="../styles.css?v=20260801-medauth-case-pass" />
 </head>
 <body class="dark-mode">
   <header class="site-header">
@@ -22,75 +22,111 @@
     </div>
   </header>
 
-  <main class="case-study brandon-case authform-case">
+  <main class="case-study brandon-case medauth-case authform-case">
     <section class="case-cover authform-cover compact-case-cover">
       <div class="case-cover-art">
-        <img src="../assets/projects/project-3.png" alt="AuthForm physician dashboard and payer summary concept" loading="eager" />
+        <img src="../assets/projects/medauth/physician-dashboard.png" alt="MedAuth Clinical physician dashboard concept" loading="eager" />
       </div>
     </section>
 
     <section class="case-intro-block case-editorial-head">
-      <div class="case-chip-row"><span>HACKATHON</span><span>BASE44 COMPETITION</span><span>APR 2026</span></div>
-      <h1>AuthForm</h1>
-      <p>An AI-enabled prior authorization dashboard that helps physicians prepare insurer-ready ADHD medication requests before submission.</p>
-      <div class="case-info-grid"><div><span>Timeline</span><strong>Apr 2026</strong></div><div><span>Role</span><strong>Product Manager</strong></div><div><span>Domain</span><strong>Healthcare operations</strong></div><div><span>Outcome</span><strong>3rd Place</strong></div></div>
+      <div class="case-chip-row"><span>HACKATHON</span><span>BASE44</span><span>APR 2026</span></div>
+      <h1>MedAuth Clinical</h1>
+      <p>An AI-assisted prior authorization platform that helps physicians generate payer-ready ADHD medication requests while giving patients clearer approval updates.</p>
+      <div class="case-info-grid"><div><span>Timeline</span><strong>Apr 2026</strong></div><div><span>Role</span><strong>Product Manager / UX</strong></div><div><span>Domain</span><strong>Clinical workflow AI</strong></div><div><span>Outcome</span><strong>2nd Place</strong></div></div>
+      <div class="case-actions"><a href="https://auth-flow-clinical.base44.app/physician/settings" target="_blank" rel="noopener">View Live Prototype</a></div>
     </section>
 
     <section class="case-story-block narrative-lede">
       <p class="case-story-label">The Story</p>
-      <h2>The product opportunity was hiding before the form was submitted</h2>
-      <p>Prior authorization delays often happen after a request reaches the payer, but many preventable issues begin earlier: missing rationale, unclear diagnosis support, incomplete documents, or scattered treatment context. AuthForm focuses on that upstream moment. I designed the product around helping physicians prepare cleaner, insurer-ready requests while keeping clinical review and final judgment in human hands.</p>
-      <div class="case-summary-grid"><div><span>01</span><h3>Before</h3><p>Physicians and staff collect diagnosis codes, medication details, clinical rationale, and supporting documents across fragmented workflows.</p></div><div><span>02</span><h3>Product Move</h3><p>Use AI to surface risk factors and organize information into payer summary cards before submission.</p></div><div><span>03</span><h3>After</h3><p>Requests become easier to review, easier to correct, and more aligned with insurer expectations.</p></div></div>
+      <h2>The most expensive part of prior authorization is often the preventable mistake.</h2>
+      <p>Physicians spend roughly 20% of their workweek, or about 13 hours per week, on prior authorization work. Under that pressure, requests become error-prone: incomplete documentation, unclear clinical justification, missed insurer-specific criteria, and avoidable back-and-forth. ADHD medications are especially vulnerable because they often require strict step-therapy proof, controlled-substance safety checks, and clear evidence that prior treatments failed or caused side effects.</p>
+      <p>MedAuth Clinical was built to move that work upstream. Instead of waiting for a payer to reject a weak packet, the platform helps physicians prepare a stronger request before submission.</p>
+      <div class="case-summary-grid"><div><span>01</span><h3>Before</h3><p>Clinics spend hours rewriting letters, navigating payer portals, chasing documentation, and responding to preventable denials.</p></div><div><span>02</span><h3>Product Move</h3><p>Use AI to extract clinical fields, generate authorization letters, score denial risk, and show the physician exactly what to strengthen.</p></div><div><span>03</span><h3>After</h3><p>Physicians keep clinical control while patients get faster, clearer movement through the authorization process.</p></div></div>
     </section>
 
-    <section class="case-question-callout"><p>How might we reduce preventable ADHD medication approval delays without removing physician control from the workflow?</p></section>
+    <section class="case-question-callout"><p>How might we reduce preventable ADHD medication authorization delays without removing physician oversight from a high-stakes clinical workflow?</p></section>
 
     <section class="case-research-block">
-      <p class="artifact-label">Workflow Evidence</p>
-      <h2>The dashboard needed to make invisible documentation risk visible</h2>
-      <p>The biggest UX challenge was not displaying more information. It was deciding what information deserved attention before submission. AuthForm organizes ICD-10 codes, treatment requests, clinical rationale, payer-specific needs, and documentation gaps into a scan-friendly review surface.</p>
-      <figure class="case-big-visual readable-artifact"><img src="../assets/projects/project-3.png" alt="AuthForm dashboard concept"><figcaption>The dashboard concept supports physician review by grouping clinical context, payer summary cards, and risk signals into one workspace.</figcaption></figure>
+      <p class="artifact-label">REQUIREMENTS</p>
+      <h2>I translated judging requirements into a product checklist that could become a working workflow</h2>
+      <p>The hackathon deliverables forced the product to be more than a landing page. It needed simulated case input, an AI-generated prior authorization letter, payer summary output, denial-risk scoring, human editing, a branded front page, and a written product statement. The bonus patient medication-disposal guide became an opportunity to make the patient portal more useful and differentiated.</p>
+      <figure class="case-big-visual readable-artifact"><img src="../assets/projects/medauth/deliverables.png" alt="MedAuth Clinical hackathon deliverables checklist"><figcaption>I used the deliverables as product acceptance criteria, then mapped each item to physician or patient workflows.</figcaption></figure>
+      <div class="case-summary-grid"><div><span>Required</span><h3>Physician Workflow</h3><p>Input a patient scenario, upload supporting documents, generate a PA letter, and review a payer-ready summary.</p></div><div><span>Required</span><h3>Risk Indicator</h3><p>Estimate denial risk with weighted factors instead of a vague AI confidence score.</p></div><div><span>Bonus</span><h3>Patient Safety</h3><p>Include medication disposal guidance and plain-language authorization updates for patients.</p></div></div>
     </section>
 
     <section class="case-story-block">
       <p class="case-story-label">SPEAKING TO USERS</p>
-      <h2>I treated physicians and care teams as high-context users with very little spare attention</h2>
-      <p>The product could not assume users had time to read a long AI explanation. Physicians need quick confidence: what is missing, why it matters, and what action should happen next. Administrative staff need consistency: the request should be organized enough that handoffs do not lose clinical context.</p>
-      <p>That pushed the dashboard toward a preparation workflow rather than a generic document generator. Each information block needed a clear job: confirm the patient context, summarize the medication request, surface the risk, and give the physician a final review path.</p>
-      <div class="case-summary-grid"><div><span>User Need</span><h3>Scan Quickly</h3><p>Use strong labels and short summaries so the review surface can be understood during a busy clinical workflow.</p></div><div><span>User Need</span><h3>Trust the Source</h3><p>Keep important clinical details visible instead of hiding the logic behind an AI-generated paragraph.</p></div><div><span>User Need</span><h3>Fix Before Submit</h3><p>Make documentation gaps visible while there is still time to correct the request.</p></div></div>
+      <h2>I designed for two audiences with very different information boundaries</h2>
+      <p>The core user is the physician or clinical staff member preparing the authorization request. They need clinical detail, insurer criteria, risk scoring, editable AI output, and clear next steps. The patient needs the opposite: plain-language progress, medication guidance, safety information, and reassurance without exposing internal denial scoring or insurer logic.</p>
+      <p>This split shaped the product architecture. MedAuth Clinical became a dual-portal system: a physician-facing workspace for clinical operations and a patient-facing companion for transparency.</p>
+      <div class="case-summary-grid"><div><span>Physician</span><h3>Needs Completeness</h3><p>Diagnosis, ICD-10 codes, prior trials, treatment rationale, safety checks, and payer criteria have to be visible before submission.</p></div><div><span>Patient</span><h3>Needs Clarity</h3><p>Patients need to know where their request stands, what medication they are taking, and what safety steps matter.</p></div><div><span>System</span><h3>Needs Separation</h3><p>Patients should never see internal risk scoring, clinical notes, missing documentation flags, or payer strategy.</p></div></div>
     </section>
 
     <section class="case-story-block">
-      <p class="case-story-label">DEFINING CORE FEATURES</p>
-      <h2>I designed AI as a preparation layer, not an approval machine</h2>
-      <p>Healthcare workflows require trust, accountability, and traceability. AuthForm therefore keeps AI in a support role. It can structure a request, flag missing evidence, and draft payer-ready summaries, but the physician remains the final reviewer. That decision protects clinical context and makes the product more realistic for a regulated environment.</p>
-      <div class="case-summary-grid"><div><span>01</span><h3>Payer Summary Cards</h3><p>Condense diagnosis, treatment request, medication history, rationale, and required evidence into one reviewable block.</p></div><div><span>02</span><h3>Risk Factors</h3><p>Surface missing documentation, weak rationale, or payer-specific requirements before submission creates delay.</p></div><div><span>03</span><h3>Human Review</h3><p>Require physician approval before anything is finalized so the AI supports judgment instead of replacing it.</p></div></div>
+      <p class="case-story-label">TEST CASE</p>
+      <h2>The demo case made the workflow specific enough to design around real constraints</h2>
+      <p>The physician test case centered on Elena Ramirez, 29, diagnosed with ADHD Combined Type, ICD-10 F90.2, requesting Lisdexamfetamine (Vyvanse) 50 mg daily through LoneStar Health Advantage. The authorization risk came from the medication being a brand-name controlled substance, the need to document two prior medication trials, side-effect discontinuation, cardiac and substance-use screening, and potential PHQ-9 or GAD-7 requirements.</p>
+      <p>Using one detailed case helped the team avoid generic healthcare UI. Every page had to answer: does this help a physician make Elena's request more complete, more defensible, and easier for the payer to understand?</p>
+      <div class="case-summary-grid"><div><span>Patient</span><h3>Elena Ramirez</h3><p>29-year-old patient with ADHD Combined Type and persistent focus, task-completion, and workplace performance issues.</p></div><div><span>Treatment</span><h3>Vyvanse 50 mg</h3><p>Requested after Concerta was discontinued due to appetite suppression and insomnia, and Strattera did not control symptoms.</p></div><div><span>Payer Risk</span><h3>LoneStar Health Advantage</h3><p>Requires step-therapy evidence, safety screening, clear rationale, and documentation for controlled-substance approval.</p></div></div>
+    </section>
+
+    <section class="case-story-block">
+      <p class="case-story-label">DASHBOARD SYSTEM</p>
+      <h2>The physician dashboard turns a messy authorization request into a reviewable clinical workspace</h2>
+      <p>The dashboard is designed around clinical workflow efficiency. A physician can enter a patient scenario, upload documentation, review extracted fields, check insurer-specific criteria, generate a prior authorization letter, and evaluate denial risk before submission. The goal is not to replace the physician; it is to reduce the administrative load around preparing a complete request.</p>
+      <figure class="case-big-visual readable-artifact"><img src="../assets/projects/medauth/physician-dashboard.png" alt="MedAuth Clinical dashboard layout"><figcaption>The physician dashboard establishes the clinical command center: patient context, risk review, documents, submissions, analytics, and settings.</figcaption></figure>
+      <div class="case-summary-grid"><div><span>Input</span><h3>Auto Extraction</h3><p>Patient summaries are parsed into diagnosis, medication, symptoms, prior treatments, side effects, ICD-10 codes, and insurer requirements.</p></div><div><span>Review</span><h3>Human Editing</h3><p>Physicians can manually correct invalid information before any AI output becomes final.</p></div><div><span>Output</span><h3>Payer-Ready Packet</h3><p>The system produces an authorization letter, structured summary card, and denial-risk recommendations.</p></div></div>
+    </section>
+
+    <section class="case-story-block">
+      <p class="case-story-label">AI RISK MODEL</p>
+      <h2>I framed AI as a scoring and strengthening layer, not a black-box approval promise</h2>
+      <p>The denial-risk indicator starts from a 50% baseline, then applies weighted factors from 1 to 5 points. Positive factors lower risk and risk factors increase it. Each point changes denial risk by 4%, with a floor of 0% and a cap of 100%. This makes the risk score explainable: physicians can see what helps, what hurts, and which missing items matter most.</p>
+      <p>For Elena's case, strong factors include documented ADHD diagnosis, two prior medication trials, and clinical rationale for Vyvanse. Risk factors include brand-name medication cost, controlled-substance requirements, missing safety documentation, and possible payer requests for PHQ-9, GAD-7, urine drug screen, or cardiac history confirmation.</p>
+      <div class="case-summary-grid"><div><span>Positive</span><h3>Step Therapy Evidence</h3><p>Concerta and Strattera trials provide a stronger rationale for requesting Vyvanse.</p></div><div><span>Risk</span><h3>Safety Screening Gaps</h3><p>Missing cardiac, substance-use, or mental-health screenings can trigger revisions.</p></div><div><span>Action</span><h3>Strengthen Packet</h3><p>The dashboard recommends concrete fixes before submission instead of simply reporting a risk score.</p></div></div>
+    </section>
+
+    <section class="case-story-block">
+      <p class="case-story-label">PATIENT EXPERIENCE</p>
+      <h2>The patient portal gives transparency without exposing internal clinical strategy</h2>
+      <p>Patients waiting for ADHD medication approval often experience anxiety because they do not know what is happening or when they might receive treatment. The patient portal shows medication basics, dosing guidance, safe disposal information for old prescriptions, authorization status, notifications, and plain-language explanations of each step.</p>
+      <figure class="case-big-visual readable-artifact"><img src="../assets/projects/medauth/patient-platform.png" alt="MedAuth Clinical patient portal concept"><figcaption>The patient portal separates patient-safe information from physician-only scoring and documentation strategy.</figcaption></figure>
+      <div class="case-summary-grid"><div><span>Status</span><h3>Approval Tracker</h3><p>Patients can see submitted, insurance reviewing, additional information requested, decision pending, approved, or denied.</p></div><div><span>Safety</span><h3>Medication Guidance</h3><p>Plain-language instructions explain how to take the medication, side effects, storage, and disposal.</p></div><div><span>Trust</span><h3>Less Anxiety</h3><p>Clear updates help patients feel their treatment is moving forward instead of disappearing into an insurance portal.</p></div></div>
     </section>
 
     <section class="case-story-block">
       <p class="case-story-label">PRODUCT TRADEOFFS</p>
-      <h2>The hardest decision was what not to automate</h2>
-      <p>In a healthcare product, automation can create risk when it hides uncertainty. I avoided framing AuthForm as a tool that "gets approvals." Instead, the product promise became more defensible: reduce preventable delays by improving packet readiness. That distinction matters because it gives the product a measurable operational goal without claiming control over payer decisions.</p>
-      <div class="case-summary-grid"><div><span>Keep</span><h3>AI Summaries</h3><p>Useful when they convert scattered clinical details into reviewable structure.</p></div><div><span>Add</span><h3>Confidence States</h3><p>Needed to show whether a recommendation is strong, incomplete, or requires physician review.</p></div><div><span>Avoid</span><h3>Auto-Submission</h3><p>Too risky for an MVP because clinical accountability and payer rules require explicit human review.</p></div></div>
+      <h2>The hardest decision was balancing automation with clinical accountability</h2>
+      <p>Full automation would look impressive in a demo but would be unsafe in practice. Prior authorization involves clinical nuance, compliance, payer-specific rules, and patient safety. I positioned AI as a drafting, extraction, and risk-identification assistant. The physician stays accountable for review, correction, and approval.</p>
+      <div class="case-summary-grid"><div><span>Automate</span><h3>Drafting & Extraction</h3><p>AI can reduce repetitive paperwork by extracting fields and generating first-pass letters.</p></div><div><span>Require Review</span><h3>Clinical Rationale</h3><p>Physicians must validate that the generated justification matches the patient story.</p></div><div><span>Protect</span><h3>Patient Boundaries</h3><p>Patient screens should never expose denial-risk logic, insurer strategy, or internal documentation gaps.</p></div></div>
+    </section>
+
+    <section class="case-story-block">
+      <p class="case-story-label">BASE44 BUILD</p>
+      <h2>Base44 let us build an end-to-end prototype fast enough to test the full workflow</h2>
+      <p>Base44 enabled the team to rapidly generate functional screens, backend-style logic, navigation, workflow automation, and AI-generated document flows using structured prompts. Instead of spending the hackathon on basic scaffolding, we focused on clinical accuracy, insurer criteria, user experience, and the product story.</p>
+      <p>The platform helped us build multiple pages quickly: role-based login, physician dashboard, authorization case intake, risk review, payer summary, patient portal, medication guidance, and approval tracking. That speed mattered because the value of MedAuth Clinical only becomes clear when the full physician-to-patient workflow is visible.</p>
+      <figure class="case-big-visual readable-artifact"><img src="../assets/projects/medauth/hackhub-placement.png" alt="HackHub MedAuth Clinical second place listing"><figcaption>MedAuth Clinical placed 2nd in the hackathon and was presented as a polished workflow rather than a single-screen concept.</figcaption></figure>
     </section>
 
     <section class="case-story-block">
       <p class="case-story-label">LEARNINGS &amp; IMPACT</p>
-      <h2>The outcome was a clearer request workflow with less avoidable back-and-forth</h2>
-      <p>AuthForm was built to reduce preventable prior authorization delays by improving request quality before submission. The product makes clinical evidence easier to scan, payer requirements easier to catch, and approval packets easier to prepare.</p>
-      <div class="case-summary-grid"><div><h3>3rd Place</h3><p>Recognized in the BASE44 Competition for healthcare workflow design.</p></div><div><h3>Clearer Packets</h3><p>Organized ICD-10 codes, treatment requests, and clinical rationale into insurer-ready summaries.</p></div><div><h3>Lower Risk</h3><p>Helped physicians identify documentation gaps before they became preventable denials or delays.</p></div></div>
+      <h2>The strongest impact was turning prior authorization from reactive correction into proactive preparation</h2>
+      <p>By reducing preventable denials and accelerating approvals, MedAuth Clinical can shorten the time patients wait for essential medications. For ADHD patients, faster access can support focus, daily functioning, and quality of life. For physicians, fewer avoidable revisions means more time spent on patient care instead of administrative rework.</p>
+      <div class="case-summary-grid"><div><h3>2nd Place</h3><p>Recognized in the University of Houston FITP Hackathon for a complete clinical authorization workflow.</p></div><div><h3>13 Hours/Week</h3><p>Addressed the administrative burden physicians spend on prior authorization paperwork.</p></div><div><h3>Dual Portal</h3><p>Created separate experiences for physician operations and patient-safe status transparency.</p></div><div><h3>AI With Oversight</h3><p>Used AI to draft, score, and strengthen requests while preserving human-in-the-loop review.</p></div></div>
     </section>
 
     <section class="case-story-block">
       <p class="case-story-label">Next</p>
-      <h2>The next version would add payer rules, source evidence, and denial-pattern learning</h2>
-      <p>If I continued AuthForm, I would test the workflow with physicians and administrative staff, then add payer-specific rule libraries, confidence indicators, source-linked documentation, audit trails, and denial-pattern insights. The goal would be to make the system more transparent without making the physician do more administrative work.</p>
+      <h2>The next version would expand payer logic, document validation, and patient support</h2>
+      <p>Next, I would expand MedAuth Clinical to support more conditions, insurers, and medication classes. I would add real-time insurer API connections where available, automated documentation validation, source-linked clinical evidence, denial-pattern analytics, refill reminders, safety education modules, and secure messaging. The long-term vision is a universal prior authorization platform that standardizes packet readiness while keeping physicians in control.</p>
     </section>
 
     <section class="case-story-block">
       <p class="case-story-label">Reflection</p>
-      <h2>AuthForm sharpened how I think about responsible AI products</h2>
-      <p>The product lesson was that AI is most useful when it reduces ambiguity without hiding uncertainty. AuthForm works because it does not pretend to be the decision maker. It helps clinicians see what might go wrong, prepare stronger documentation, and keep control over the final request.</p>
+      <h2>MedAuth Clinical helped me think more carefully about AI in high-stakes workflows</h2>
+      <p>This project sharpened how I think about product management in regulated spaces. The best AI product was not the one that automated the most; it was the one that reduced ambiguity, made risk explainable, preserved clinical review, and improved the experience for both physicians and patients. That is the difference between an impressive demo and a responsible workflow.</p>
     </section>
 
     <a class="back-link" href="../index.html">&larr; Back to all projects</a>
@@ -111,6 +147,6 @@
     <a href="../index.html#contact-section">Contact</a>
   </footer>
 
-  <script src="../script.js?v=20260801-editorial-evidence-pass"></script>
+  <script src="../script.js?v=20260801-medauth-case-pass"></script>
 </body>
 </html>
