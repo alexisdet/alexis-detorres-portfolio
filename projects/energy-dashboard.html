@@ -72,10 +72,10 @@
     </section>
 
     <section class="case-story-block">
-      <p class="case-story-label">DASHBOARD SYSTEM</p>
-      <h2>The physician dashboard turns a messy authorization request into a reviewable clinical workspace</h2>
-      <p>The dashboard is designed around clinical workflow efficiency. A physician can enter a patient scenario, upload documentation, review extracted fields, check insurer-specific criteria, generate a prior authorization letter, and evaluate denial risk before submission. The goal is not to replace the physician; it is to reduce the administrative load around preparing a complete request.</p>
-      <figure class="case-big-visual readable-artifact"><img src="../assets/projects/medauth/physician-dashboard.png" alt="MedAuth Clinical dashboard layout"><figcaption>The physician dashboard establishes the clinical command center: patient context, risk review, documents, submissions, analytics, and settings.</figcaption></figure>
+      <p class="case-story-label">INTERFACE INSPIRATION</p>
+      <h2>I used healthcare dashboard references to shape the Base44 workflow hierarchy</h2>
+      <p>The image below is inspiration, not the final MedAuth prototype. I used healthcare dashboard patterns to think through how the Base44 build should organize navigation, patient context, status indicators, review actions, and next-step hierarchy before translating those ideas into the working product.</p>
+      <figure class="case-big-visual readable-artifact"><img src="../assets/projects/medauth/physician-dashboard.png" alt="Healthcare dashboard reference used for MedAuth Clinical inspiration"><figcaption>Reference image used for dashboard inspiration: it helped define the clinical command-center feel, not the final MedAuth screen.</figcaption></figure>
       <div class="case-summary-grid"><div><span>Input</span><h3>Auto Extraction</h3><p>Patient summaries are parsed into diagnosis, medication, symptoms, prior treatments, side effects, ICD-10 codes, and insurer requirements.</p></div><div><span>Review</span><h3>Human Editing</h3><p>Physicians can manually correct invalid information before any AI output becomes final.</p></div><div><span>Output</span><h3>Payer-Ready Packet</h3><p>The system produces an authorization letter, structured summary card, and denial-risk recommendations.</p></div></div>
     </section>
 
@@ -88,10 +88,10 @@
     </section>
 
     <section class="case-story-block">
-      <p class="case-story-label">PATIENT EXPERIENCE</p>
-      <h2>The patient portal gives transparency without exposing internal clinical strategy</h2>
-      <p>Patients waiting for ADHD medication approval often experience anxiety because they do not know what is happening or when they might receive treatment. The patient portal shows medication basics, dosing guidance, safe disposal information for old prescriptions, authorization status, notifications, and plain-language explanations of each step.</p>
-      <figure class="case-big-visual readable-artifact"><img src="../assets/projects/medauth/patient-platform.png" alt="MedAuth Clinical patient portal concept"><figcaption>The patient portal separates patient-safe information from physician-only scoring and documentation strategy.</figcaption></figure>
+      <p class="case-story-label">PATIENT PORTAL INSPIRATION</p>
+      <h2>I separated patient-facing clarity from physician-only authorization logic</h2>
+      <p>The image below is also a visual reference, not a final MedAuth prototype screen. It helped shape the patient-side direction: a calmer portal with clear status, plain-language medication information, and fewer back-office details than the physician workspace.</p>
+      <figure class="case-big-visual readable-artifact"><img src="../assets/projects/medauth/patient-platform.png" alt="Patient portal reference used for MedAuth Clinical inspiration"><figcaption>Reference image used for patient portal inspiration: simple status, patient-safe guidance, and a less clinical tone.</figcaption></figure>
       <div class="case-summary-grid"><div><span>Status</span><h3>Approval Tracker</h3><p>Patients can see submitted, insurance reviewing, additional information requested, decision pending, approved, or denied.</p></div><div><span>Safety</span><h3>Medication Guidance</h3><p>Plain-language instructions explain how to take the medication, side effects, storage, and disposal.</p></div><div><span>Trust</span><h3>Less Anxiety</h3><p>Clear updates help patients feel their treatment is moving forward instead of disappearing into an insurance portal.</p></div></div>
     </section>
 
@@ -105,7 +105,7 @@
     <section class="case-story-block">
       <p class="case-story-label">BASE44 BUILD</p>
       <h2>Base44 let us build an end-to-end prototype fast enough to test the full workflow</h2>
-      <p>Base44 enabled the team to rapidly generate functional screens, backend-style logic, navigation, workflow automation, and AI-generated document flows using structured prompts. Instead of spending the hackathon on basic scaffolding, we focused on clinical accuracy, insurer criteria, user experience, and the product story.</p>
+      <p>Base44 enabled the team to rapidly generate functional screens, backend-style logic, navigation, workflow automation, and AI-generated document flows using structured prompts. The inspiration screens shaped hierarchy and tone, while Base44 turned those patterns into role-based pages and workflow logic. Instead of spending the hackathon on basic scaffolding, we focused on clinical accuracy, insurer criteria, user experience, and the product story.</p>
       <p>The platform helped us build multiple pages quickly: role-based login, physician dashboard, authorization case intake, risk review, payer summary, patient portal, medication guidance, and approval tracking. That speed mattered because the value of MedAuth Clinical only becomes clear when the full physician-to-patient workflow is visible.</p>
       <figure class="case-big-visual readable-artifact"><img src="../assets/projects/medauth/hackhub-placement.png" alt="HackHub MedAuth Clinical second place listing"><figcaption>MedAuth Clinical placed 2nd in the hackathon and was presented as a polished workflow rather than a single-screen concept.</figcaption></figure>
     </section>

@@ -33,13 +33,13 @@
       <div class="case-chip-row"><span>HACKATHON</span><span>AI ACADEMIC PLANNING</span><span>OCT 2025</span></div>
       <h1>Mentora</h1>
       <p>Turning scattered syllabi, class policies, grade rules, and academic reminders into one semester operating system students can trust.</p>
-      <div class="case-info-grid"><div><span>Timeline</span><strong>48-hour sprint</strong></div><div><span>Role</span><strong>Product Manager / UX</strong></div><div><span>Research</span><strong>10+ student interviews</strong></div><div><span>Outcome</span><strong>2nd Place, 40+ users</strong></div></div>
+      <div class="case-info-grid"><div><span>Timeline</span><strong>48-hour sprint</strong></div><div><span>Role</span><strong>Product Manager / UX</strong></div><div><span>Focus</span><strong>Syllabus parsing, planning, AI support</strong></div><div><span>Outcome</span><strong>2nd Place</strong></div></div>
     </section>
 
     <section class="case-story-block narrative-lede">
       <p class="case-story-label">The Story</p>
       <h2>The issue was not motivation. It was translation.</h2>
-      <p>Students were not asking for another productivity app. They were trying to decode long syllabi, email updates, grading policies, Canvas posts, group chats, and calendar reminders into a single question: what do I need to do next? Mentora, originally developed as DEMI, became a focused answer to that problem. I led the product roadmap by turning interview patterns into a 48-hour MVP: upload a syllabus, extract what matters, organize the semester, and let an AI assistant answer course-specific questions.</p>
+      <p>Students were not asking for another productivity app. They were trying to decode long syllabi, email updates, grading policies, Canvas posts, group chats, and calendar reminders into a single question: what do I need to do next? Mentora, originally developed as DEMI, became a focused answer to that problem. I led the product roadmap by turning academic-planning friction into a 48-hour MVP: upload a syllabus, extract what matters, organize the semester, and let an AI assistant answer course-specific questions.</p>
       <div class="case-summary-grid"><div><span>01</span><h3>Before</h3><p>Students manually copied deadlines and policies from dense documents into separate calendars, notes, and reminders.</p></div><div><span>02</span><h3>Product Move</h3><p>Scope the product around syllabus extraction, assignment tracking, calendar sync, grade visibility, and Demi as a course-aware assistant.</p></div><div><span>03</span><h3>After</h3><p>Students could move from static class documents to structured deadlines, tasks, grade forecasts, and study guidance.</p></div></div>
     </section>
 
@@ -53,11 +53,11 @@
       <div class="case-summary-grid"><div><span>Friction</span><h3>Too Many Sources</h3><p>Syllabi, LMS updates, emails, and calendar reminders each held partial truth.</p></div><div><span>Friction</span><h3>No Confidence Layer</h3><p>Students were unsure whether deadlines were current, complete, or worth prioritizing.</p></div><div><span>Friction</span><h3>Grades Felt Reactive</h3><p>Students often knew their current grade too late, but not what future score would change the outcome.</p></div></div>
     </section>
 
-    <section class="case-research-block">
-      <p class="artifact-label">SPEAKING TO USERS</p><h2>I narrowed the roadmap by looking at where planning actually breaks</h2>
-      <p>The personas below are intentionally large because they are the evidence behind the roadmap. They showed that students needed the same product promise from different angles: reduce manual setup, clarify priorities, and show the next best action.</p>
-      <figure class="case-big-visual readable-artifact"><img src="../assets/projects/mentora/persona-aidan.png" alt="Mentora persona Aidan"><figcaption>Aidan showed the need for a system that can consolidate Canvas, Outlook, Google Calendar, Notion, syllabi, and ChatGPT into one reliable academic plan.</figcaption></figure>
-      <figure class="case-big-visual readable-artifact"><img src="../assets/projects/mentora/persona-max.png" alt="Mentora persona Max"><figcaption>Max showed the leadership/workload side of the problem: even high-performing students need help deciding what deserves attention first.</figcaption></figure>
+    <section class="case-story-block">
+      <p class="case-story-label">Scope</p>
+      <h2>I focused the product around the moment students move from documents to action</h2>
+      <p>Mentora did not need to become every academic tool at once. The clearest version started with the highest-friction input: the syllabus. From there, the product could extract deadlines, organize tasks, surface calendar events, and support course-specific questions through Demi.</p>
+      <div class="case-summary-grid"><div><span>Input</span><h3>Syllabus Upload</h3><p>Start with the document students already receive instead of asking them to rebuild every assignment manually.</p></div><div><span>Output</span><h3>Structured Semester</h3><p>Turn policies, dates, assignments, and grade rules into visible planning surfaces.</p></div><div><span>Support</span><h3>Demi Assistant</h3><p>Use AI for course-context questions after the source material has been structured.</p></div></div>
     </section>
 
     <section class="case-story-block">
@@ -68,27 +68,19 @@
     </section>
 
     <section class="case-story-block">
-      <p class="case-story-label">DEFINING CORE FEATURES</p><h2>Each screen answered a specific planning question</h2>
-      <p>Instead of placing all prototype images together, I broke the flow into decision moments. The product needed to help students first import information, then ask questions, then see time, then understand performance.</p>
+      <p class="case-story-label">DEFINING CORE FEATURES</p><h2>I kept the visuals to the screens that explain the product loop</h2>
+      <p>Rather than showing every prototype screen at once, the case study now follows the product logic: import the source material, clarify confusing details, and translate the semester into next actions.</p>
       <div class="case-evidence-pair">
-        <figure><img src="../assets/projects/mentora/syllabus-upload.png" alt="Mentora syllabus upload screen"><figcaption>Import: Students start with the document they already receive instead of rebuilding their semester manually.</figcaption></figure>
-        <div><h3>1. Capture the source of truth</h3><p>The upload screen reduces setup friction by making the syllabus the starting point. The design choice here was practical: do not ask users to create every assignment by hand before they can experience value.</p></div>
+        <figure><img src="../assets/projects/mentora/syllabus-upload.png" alt="Mentora syllabus upload screen"><figcaption>Import: the syllabus becomes the starting point for the semester plan.</figcaption></figure>
+        <div><h3>1. Capture the source of truth</h3><p>The upload screen reduces setup friction by making the syllabus the first action. This keeps the product grounded in the academic document that already contains deadlines, grading rules, and course policies.</p></div>
       </div>
       <div class="case-evidence-pair reverse">
-        <figure><img src="../assets/projects/mentora/demi-chat.png" alt="Mentora Demi AI assistant screen"><figcaption>Clarify: Demi turns static syllabus content into course-specific answers.</figcaption></figure>
-        <div><h3>2. Let students ask the messy questions</h3><p>Demi gives students a way to ask, "What changed?" "What is due?" or "What should I focus on?" without searching through multiple class sources. The AI layer supports interpretation after the system has structured the source material.</p></div>
+        <figure><img src="../assets/projects/mentora/demi-chat.png" alt="Mentora Demi AI assistant screen"><figcaption>Clarify: Demi turns static course information into specific answers.</figcaption></figure>
+        <div><h3>2. Let students ask course-specific questions</h3><p>Demi supports questions like what is due, what changed, or what deserves attention next. The AI layer is positioned as a planning companion, not a generic chatbot detached from the semester workflow.</p></div>
       </div>
       <div class="case-evidence-pair">
-        <figure><img src="../assets/projects/mentora/calendar.png" alt="Mentora calendar screen"><figcaption>Plan: Extracted deadlines become a visible calendar instead of hidden syllabus text.</figcaption></figure>
-        <div><h3>3. Make time visible</h3><p>The calendar page turns extracted data into a planning surface. This matters because students do not just need dates; they need dates in relation to everything else happening that week.</p></div>
-      </div>
-      <div class="case-evidence-pair reverse">
-        <figure><img src="../assets/projects/mentora/forecast-todo.png" alt="Mentora forecast and to-do screen"><figcaption>Prioritize: To-dos and grade forecasts connect academic status to next actions.</figcaption></figure>
-        <div><h3>4. Connect grades to action</h3><p>The forecast and to-do screens help students understand both what is coming and what it means. This was the product shift from "tracking tasks" to "helping students make better academic decisions."</p></div>
-      </div>
-      <div class="case-image-grid compact-supporting-artifacts">
-        <figure><img src="../assets/projects/mentora/grade-calculator.png" alt="Mentora grade calculator screen"><figcaption>Grade calculator: answers "where am I now?"</figcaption></figure>
-        <figure><img src="../assets/projects/mentora/profile.png" alt="Mentora profile screen"><figcaption>Profile/settings: keeps notifications and display preferences close to the workflow.</figcaption></figure>
+        <figure><img src="../assets/projects/mentora/forecast-todo.png" alt="Mentora forecast and to-do screen"><figcaption>Prioritize: grade forecasts and to-dos connect academic status to next actions.</figcaption></figure>
+        <div><h3>3. Connect academic status to action</h3><p>The forecast and to-do screens help students understand both what is coming and what it means. This was the product shift from simply tracking tasks to helping students make clearer academic decisions.</p></div>
       </div>
     </section>
 
@@ -99,8 +91,8 @@
     </section>
 
     <section class="case-story-block">
-      <p class="case-story-label">LEARNINGS &amp; IMPACT</p><h2>The MVP proved students wanted academic clarity more than AI novelty</h2>
-      <div class="case-summary-grid"><div><h3>2nd Place</h3><p>Recognized in the academic planning platform competition.</p></div><div><h3>48 Hours</h3><p>Shipped a focused MVP under hackathon constraints without losing the core workflow.</p></div><div><h3>10+ Interviews</h3><p>Roadmap decisions were based on repeated student pain points, not feature guessing.</p></div><div><h3>40+ Users</h3><p>Early adoption validated syllabus analysis, assignment tracking, and planning support.</p></div></div>
+      <p class="case-story-label">LEARNINGS &amp; IMPACT</p><h2>The MVP showed why AI needs a clear workflow, not just a novelty layer</h2>
+      <div class="case-summary-grid"><div><h3>2nd Place</h3><p>Recognized in the academic planning platform competition.</p></div><div><h3>48 Hours</h3><p>Shipped a focused MVP under hackathon constraints without losing the core workflow.</p></div><div><h3>Focused MVP</h3><p>Protected the scope by prioritizing syllabus upload, planning surfaces, and course-context assistance.</p></div><div><h3>Workflow Clarity</h3><p>Connected scattered class documents to visible tasks, deadlines, and grade-planning decisions.</p></div></div>
     </section>
 
     <section class="case-story-block">
