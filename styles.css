@@ -2957,3 +2957,77 @@ main.case-study > section.case-cover.mentora-cover.compact-case-cover .case-cove
     object-position: center 44% !important;
   }
 }
+
+/* Final homepage/case cover polish pass. Keeps project covers framed, readable, and consistent. */
+.projects-page .project-thumb {
+  background: color-mix(in srgb, var(--bg-main) 84%, #ffffff 16%) !important;
+  border: 1px solid color-mix(in srgb, var(--accent-line) 18%, transparent) !important;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.88), 0 0 34px rgba(255,255,255,.68), 0 18px 46px rgba(30,34,72,.16) !important;
+  overflow: hidden !important;
+}
+
+.projects-page .project-thumb img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+.projects-page .divide-thumb img {
+  object-position: center 48% !important;
+}
+
+.projects-page .mentora-thumb img {
+  object-position: center center !important;
+}
+
+.projects-page .authform-thumb img {
+  object-position: center 48% !important;
+}
+
+.projects-page .energy-thumb img {
+  object-position: center 50% !important;
+}
+
+main.case-study > section.case-cover.compact-case-cover .case-cover-art,
+main.case-study > section.case-cover.energy-cover .case-cover-art {
+  background: color-mix(in srgb, var(--bg-main) 84%, #ffffff 16%) !important;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 36px rgba(255,255,255,.66), 0 22px 50px rgba(30,34,72,.14) !important;
+  overflow: hidden !important;
+}
+
+main.case-study > section.case-cover.compact-case-cover .case-cover-art > img,
+main.case-study > section.case-cover.energy-cover .case-cover-art > img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+main.case-study > section.case-cover.divide-cover.compact-case-cover .case-cover-art > img {
+  object-position: center 48% !important;
+}
+
+main.case-study > section.case-cover.authform-cover.compact-case-cover .case-cover-art > img {
+  object-position: center 48% !important;
+}
+
+main.case-study > section.case-cover.mentora-cover.compact-case-cover .case-cover-art > img {
+  object-position: center center !important;
+}
+
+main.case-study > section.case-cover.energy-cover .case-cover-art > img {
+  object-position: center 50% !important;
+}
+
+@media (max-width: 760px) {
+  .projects-page .project-thumb img,
+  main.case-study > section.case-cover.compact-case-cover .case-cover-art > img,
+  main.case-study > section.case-cover.energy-cover .case-cover-art > img {
+    object-position: center center !important;
+  }
+}
